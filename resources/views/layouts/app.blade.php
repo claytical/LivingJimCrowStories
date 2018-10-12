@@ -6,6 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="css/favicon.ico">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <title>@yield('title')</title>
     </head>
     <body>
