@@ -24,6 +24,6 @@ class SocialAuthController extends Controller
         	$player->save();
         }
         session(['email' => $user->email]);
-        return view ( 'home' )->withDetails ( $user )->withService ( $service );
+        return view ( 'authenticated' )->withDetails ( $user )->withService ( $service );
     }    
 }
