@@ -85,12 +85,10 @@
                 @if($service == 'facebook')
                 <div class="title m-b-md">
                     Welcome {{ $details->user['name']}}
-                    <br>
-                    <?php var_dump($details) ?>
 
                 </div>
                 @endif
             </div>
         </div>
-    </body>
+    </body>55
 </html>
