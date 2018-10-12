@@ -85,7 +85,7 @@
                 @if($service == 'facebook')
                 <div class="title m-b-md">
                     Welcome {{ $details->user['name']}}
-
+                    Your email is {{ session('email'); }}
                 </div>
                 @endif
             </div>
