@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Socialite;
-use Player;
+use App\Player;
 
 class SocialAuthController extends Controller
 {
