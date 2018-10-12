@@ -15,7 +15,7 @@ class SocialAuthController extends Controller
 
 	public function callback($service) {
         $user = Socialite::with ( $service )->user ();
-        if($player = Player::where('email', '=', $user->email)->count() > 0) {
+        if(Player::where('email', '=', $user->email)->count() > 0) {
         	//make a new player
         	$player = new Player;
         	$player->email = $user->email;
