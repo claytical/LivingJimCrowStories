@@ -22,7 +22,7 @@ class SocialAuthController extends Controller
         	$player->name = $user->name;
         	$player->save();
         }
-        session()->('email', $user->email);
+        session(['email' => $user->email]);
         return view ( 'home' )->withDetails ( $user )->withService ( $service );
     }    
 }
