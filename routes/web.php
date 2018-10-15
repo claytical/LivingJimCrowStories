@@ -20,3 +20,9 @@ Route::get ( '/callback/{service}', 'SocialAuthController@callback' );
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/* story routes */
+Route::get('/story/{id}', 'StoryController@play');
+Route::get('/story/{id}/edit', 'StoryController@edit');
+Route::get('/story/create', 'StoryController@create');
+
