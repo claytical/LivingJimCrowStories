@@ -79,7 +79,7 @@ function unlock(item) {
 
 	}
 	html += "</p></div>";
-	var new_item = $("#vault-content").prepend(html);
+	var new_item = $("#vault_content").prepend(html);
 	if(!vaultOpen) {
 		vault.open();
 	}
