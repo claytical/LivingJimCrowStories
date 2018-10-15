@@ -46,9 +46,11 @@
             });
 
           $('#vault').offcanvas({
-              modifiers: 'left, overlay', // default options
+              modifiers: 'right, reveal', // default options
               triggerButton: '#triggerButton' // btn to open offcanvas
           });
+          
+          var vault = $('#vault').data('offcanvas-component');          
 
         </script>
 
