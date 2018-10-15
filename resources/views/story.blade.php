@@ -18,6 +18,7 @@
 </div>
 @section('scripts')
         <script src="/js/stories/{{ $story->squiffy }}.js" charset="UTF-8"></script>
+        <script src="/js/vault.js" charset="UTF-8"></script>
 
         <script>
             var squif;
