@@ -9,8 +9,18 @@
 
 @section('content')
 
+    <div class="c-offcanvas-content-wrap">
+        <a href="#vault" id="triggerButton">Close</a>
+    </div>
+    
+    <aside id="vault">
+         <h2>Vault</h2>
+          <p>vault content goes here</p>      
+
+    </aside>
+
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-sm-12">    
     <h1>{{ $story->title}}</h1>
     <h2>{{ $story->authors}}</h2>
       <div id="squiffy"></div>
@@ -34,6 +44,12 @@
 //                    restart();
 //                });
             });
+
+          $('#vault').offcanvas({
+              modifiers: 'left, overlay', // default options
+              triggerButton: '#triggerButton' // btn to open offcanvas
+          });
+
         </script>
 
 @endsection
