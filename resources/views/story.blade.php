@@ -8,11 +8,11 @@
 @endsection
 
 @section('content')
-        <script src="js/stories/{{ $story->squiffy }}.js" charset="UTF-8"></script>
+        <script src="/js/stories/{{ $story->squiffy }}.js" charset="UTF-8"></script>
 
         <script>
             var squif;
-            jQuery(function($){
+            $(function($){
 //                $('#vault_button').click(toggleVault);
                 squif = $('#squiffy').squiffy();
 //                var restart = function () {
