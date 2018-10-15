@@ -11,7 +11,7 @@ class StoryController extends Controller
 	public function play($id) {
 
 //		$story = Story::find($id);
-		$story = new stdClass();
+		$story = new \stdClass();
 		$story->title = "Sample Title for Story";
 		$story->description = "Lorem ipsum description";
 		$story->id = 1;
