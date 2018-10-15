@@ -30,6 +30,7 @@
 
         <script>
             var squif;
+            var vault;
             $(function($){
 //                $('#vault_button').click(toggleVault);
                 squif = $('#squiffy').squiffy();
@@ -41,14 +42,15 @@
 //                    if (e.which !== 13) return;
 //                    restart();
 //                });
+                $('#vault').offcanvas({
+                    modifiers: 'right, reveal', // default options
+                    triggerButton: '#triggerButton' // btn to open offcanvas
+                });
+                vault = $('#vault').data('offcanvas-component');          
+
             });
 
-          $('#vault').offcanvas({
-              modifiers: 'right, reveal', // default options
-              triggerButton: '#triggerButton' // btn to open offcanvas
-          });
           
-          var vault = $('#vault').data('offcanvas-component');          
 
         </script>
 
