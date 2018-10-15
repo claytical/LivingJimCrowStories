@@ -6,3 +6,10 @@
 .story-card {
 	margin-bottom: 1rem;
 }
+
+#vault {
+    background: black;
+    color: white;
+    z-index: 9999;
+    padding: 1rem;
+}

@@ -5,10 +5,6 @@
 @section('topnav')
     @parent
     <!-- additional topnav-->
-@endsection
-
-@section('content')
-
     <div class="c-offcanvas-content-wrap">
         <a href="#vault" id="triggerButton">Close</a>
     </div>
@@ -16,8 +12,11 @@
     <aside id="vault">
          <h2>Vault</h2>
           <p>vault content goes here</p>      
-
     </aside>
+
+@endsection
+
+@section('content')
 
 <div class="row">
   <div class="col-sm-12">    
