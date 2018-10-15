@@ -80,6 +80,5 @@ function unlock(item) {
 	if(!vaultOpen) {
 		openVault();
 	}
-	$(".vault-content a").featherlight();
 	$(".item .new-label").fadeIn(500).delay(3000).fadeOut(3000);
 }
