@@ -7,7 +7,7 @@
     <!-- additional topnav-->    
     <aside id="vault">
          <h2>Vault</h2>
-          <p>vault content goes here</p>      
+         <div id="vault_content"></div>
     </aside>
 
 @endsection

@@ -1,6 +1,7 @@
 var vaultOpen = false;
 
 function openVault() {
+	vault.open();
 	vaultOpen = true;
 	$("#story-container").addClass("pure-g");
 	$("#story").removeClass("pure-u-3-3");
@@ -10,10 +11,12 @@ function openVault() {
 
 function closeVault() {
 	vaultOpen = false;
+
 	$("#story-container").removeClass("pure-g");
 	$("#story").removeClass("pure-u-2-3");
 	$("#story").addClass("pure-u-3-3");
 	$("#vault").hide();
+
 
 }
 
@@ -78,7 +81,7 @@ function unlock(item) {
 	html += "</p></div>";
 	var new_item = $(".vault-content").prepend(html);
 	if(!vaultOpen) {
-		openVault();
+		vault.open();
 	}
-	$(".item .new-label").fadeIn(500).delay(3000).fadeOut(3000);
+//	$(".item .new-label").fadeIn(500).delay(3000).fadeOut(3000);
 }
