@@ -4,11 +4,7 @@
 
 @section('topnav')
     @parent
-    <!-- additional topnav-->
-    <div class="c-offcanvas-content-wrap">
-        <a href="#vault" id="triggerButton">Close</a>
-    </div>
-    
+    <!-- additional topnav-->    
     <aside id="vault">
          <h2>Vault</h2>
           <p>vault content goes here</p>      
@@ -25,6 +21,9 @@
       <div id="squiffy"></div>
   </div>
 </div>
+
+@endsection
+
 @section('scripts')
         <script src="/js/stories/{{ $story->squiffy }}.js" charset="UTF-8"></script>
         <script src="/js/vault.js" charset="UTF-8"></script>
