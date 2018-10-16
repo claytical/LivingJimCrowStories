@@ -19,10 +19,12 @@ Route::get ( '/redirect/{service}', 'SocialAuthController@redirect' );
 Route::get ( '/callback/{service}', 'SocialAuthController@callback' );
 Auth::routes();
 
-Route::get('/admin/stories', 'StoryController@admin')->name('admin.stories');
-
-/* story routes */
+/* public story routes */
 Route::get('/story/{id}', 'StoryController@play');
-Route::get('/story/{id}/edit', 'StoryController@edit');
-Route::get('/story/create', 'StoryController@create');
+
+
+/* admin routes*/
+Route::get('/admin/stories', 'StoryController@admin')->name('admin.stories')->middleware('auth');
+Route::get('/admin/story/create', 'StoryController@create')->middleware('auth');
+Route::get('/admin/story/{id}/edit', 'StoryController@edit')->middleware('auth');
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Story;
+use Illuminate\Support\Facades\Storage;
 
 class StoryController extends Controller
 {
@@ -27,7 +28,8 @@ class StoryController extends Controller
     }  
 
 	public function create() {
- 		return view('story_create');
+		$squiffies = Storage::files(public_path('js/stories');
+ 		return view('admin.create_story', ['squiffies' => $squiffies]);
     }  
 
 	public function admin() {
