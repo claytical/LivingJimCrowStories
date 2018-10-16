@@ -22,7 +22,7 @@ Auth::routes();
 
 
 /* public story routes */
-Route::get('/story/{id}', 'StoryController@show');
+Route::get('/play/{id}', 'StoryController@show');
 
 
 /* admin routes*/
