@@ -10,6 +10,7 @@
             </nav>
         </div>
         <div class="col-md-9">
+          <h1>New Story</h1>
           {!! Form::open(['route' => 'admin.stories.store']) !!}
 
             <div class="form-group">
@@ -23,12 +24,13 @@
             </div>
 
             <div class="form-group">
+              {!! Form::label('description', 'Description') !!}
               {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
             </div>
 
 
             <div class="form-group">
-              {{ Form::select('squiffy', $squiffies, null) }}
+              {{ Form::select('squiffy', $squiffies, null, ['class'] => 'form-control') }}
             </div>
             {!! Form::submit('Create Story', ['class' => 'btn btn-info']) !!}
 
