@@ -10,7 +10,7 @@
             </nav>
         </div>
         <div class="col-md-9">
-{!! Form::open(['route' => 'contact.store']) !!}
+{!! Form::open(['route' => 'admin.stories.store']) !!}
     $story->squiffy = "example";
 
             <div class="form-group">
@@ -29,14 +29,7 @@
 
 
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Example select</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
+              {{ Form::select('squiffy', $squiffies, null); }}
             </div>
             {!! Form::submit('Create Story', ['class' => 'btn btn-info']) !!}
 

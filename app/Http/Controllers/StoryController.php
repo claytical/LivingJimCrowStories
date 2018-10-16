@@ -32,6 +32,9 @@ class StoryController extends Controller
  		return view('admin.create_story', ['squiffies' => $squiffies]);
     }  
 
+    public function store(Request $request) {
+
+    }
 	public function admin() {
 		$stories = Story::all();
  		return view('admin.stories', ['stories' => $stories]);
