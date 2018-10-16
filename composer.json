@@ -6,14 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
-        "brackets/craftable": "^2.0",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/socialite": "^3.1",
         "laravel/tinker": "~1.0"
     },
     "require-dev": {
-        "brackets/admin-generator": "^1.0",
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "~1.0",
