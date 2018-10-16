@@ -29,7 +29,7 @@
 
 
             <div class="form-group">
-              {{ Form::select('squiffy', $squiffies, null); }}
+              {{ Form::select('squiffy', $squiffies, null) }}
             </div>
             {!! Form::submit('Create Story', ['class' => 'btn btn-info']) !!}
 
