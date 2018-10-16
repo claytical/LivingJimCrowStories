@@ -10,8 +10,7 @@
             </nav>
         </div>
         <div class="col-md-9">
-{!! Form::open(['route' => 'admin.stories.store']) !!}
-    $story->squiffy = "example";
+          {!! Form::open(['route' => 'admin.stories.store']) !!}
 
             <div class="form-group">
               {!! Form::label('title', 'Title') !!}

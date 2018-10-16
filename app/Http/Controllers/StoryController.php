@@ -28,7 +28,12 @@ class StoryController extends Controller
     }  
 
 	public function create() {
-		$squiffies = Storage::files(public_path('js/stories'));
+		$filesInFolder = \File::files(public_path('js/stories'));     
+    	$squiffies = [];
+    	foreach($filesInFolder as $path) { 
+          $file = pathinfo($path);
+    	  $squiffies[] = $file['filename'];
+     	} 
  		return view('admin.create_story', ['squiffies' => $squiffies]);
     }  
 
