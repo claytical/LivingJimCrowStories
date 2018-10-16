@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-9">
           <h1>New Story</h1>
-          {!! Form::open(['route' => 'admin.stories.store']) !!}
+          {!! Form::open(['route' => 'story.store']) !!}
 
             <div class="form-group">
               {!! Form::label('title', 'Title') !!}

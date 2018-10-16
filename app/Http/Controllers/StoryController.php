@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class StoryController extends Controller
 {
     //
-	public function play($id) {
+	public function show($id) {
 
 //		$story = Story::find($id);
 		$story = new \stdClass();
