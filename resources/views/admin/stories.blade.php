@@ -23,7 +23,7 @@
                 <tr> 
                   <td>{{ $story->title}}</td>
                   <td>{{ $story->authors}}</td>
-                  <td>{{ $story->source}}</td>
+                  <td>{{ $story->squiffy}}</td>
                 </tr>
                 @endforeach
               </tbody>

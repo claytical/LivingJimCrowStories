@@ -35,7 +35,7 @@ class StoryController extends Controller
           $file = pathinfo($path);
           $existingSquiffy = Story::where('squiffy', '=', $file['filename'])->count();
           if ($existingSquiffy == 0) {
-    	  	$squiffies[] = $file['filename'];
+    	  	$squiffies[] = [$file['filename'] => $file['filename']];
      	   }
      	} 
  		return view('admin.create_story', ['squiffies' => $squiffies]);
