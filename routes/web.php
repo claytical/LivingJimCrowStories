@@ -19,7 +19,7 @@ Route::get ( '/redirect/{service}', 'SocialAuthController@redirect' );
 Route::get ( '/callback/{service}', 'SocialAuthController@callback' );
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin/stories', 'StoryController@admin')->name('admin.stories');
 
 /* story routes */
 Route::get('/story/{id}', 'StoryController@play');

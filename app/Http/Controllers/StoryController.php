@@ -30,4 +30,9 @@ class StoryController extends Controller
  		return view('story_create');
     }  
 
+	public function admin() {
+		$stories = Story::all();
+ 		return view('admin.stories', ['stories' => $stories]);
+    }  
+
 }
