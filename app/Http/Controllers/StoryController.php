@@ -30,7 +30,7 @@ class StoryController extends Controller
 	public function create() {
 		$filesInFolder = \File::files(public_path('js/stories'));     
     	$squiffies = [];
-    	$squiffies[] = "";
+    	$squiffies[] = ["" => "Please Select a Squiffy"];
     	foreach($filesInFolder as $path) { 
           $file = pathinfo($path);
           $existingSquiffy = Story::where('squiffy', '=', $file['filename'])->count();
