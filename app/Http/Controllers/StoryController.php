@@ -9,15 +9,21 @@ use Illuminate\Support\Facades\Storage;
 class StoryController extends Controller
 {
     //
+    public function welcome() {
+    	$stories = Story::all();
+ 		return view('welcome', ['stories' => $stories]);
+
+    }
 	public function show($id) {
 
-//		$story = Story::find($id);
-		$story = new \stdClass();
+		$story = Story::find($id);
+/*		$story = new \stdClass();
 		$story->title = "Sample Title for Story";
 		$story->description = "Lorem ipsum description";
 		$story->id = 1;
 		$story->authors = "Me, Myself, and I";
 		$story->squiffy = "example";
+ */
  		return view('story', ['story' => $story]);
     }  
 
