@@ -10,6 +10,7 @@
             </nav>
         </div>
         <div class="col-md-9">
+            <a class="btn btn-primary" href="{{ url('story/create') }}">New Story</a>
             <table class="table">
               <thead class="thead-dark">
                 <tr>
