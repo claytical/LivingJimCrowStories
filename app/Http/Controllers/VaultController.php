@@ -48,7 +48,7 @@ class VaultController extends Controller
     }  
 
 
-	public function admin() {
+	public function index() {
 		$items = VaultItem::all();
  		return view('admin.vault', ['items' => $items]);
     }  
