@@ -6,7 +6,7 @@
         <div class="col-md-3">
             <nav class="nav flex-column">
               <a class="nav-link active" href="{{ url('admin/stories') }}">Stories</a>
-              <a class="nav-link" href="{{ url('admin/logout') }}">Vault Items</a>
+              <a class="nav-link" href="{{ url('admin/vault') }}">Vault Items</a>
             </nav>
         </div>
         <div class="col-md-9">

@@ -10,24 +10,24 @@
             </nav>
         </div>
         <div class="col-md-9">
-            <a class="btn btn-primary float-right mb-3" href="{{ url('story/create') }}">New Story</a>
+            <a class="btn btn-primary float-right mb-3" href="{{ url('admin/vault/create') }}">New Vault Item</a>
             <table class="table">
               <thead class="thead-dark">
                 <tr>
                   <th scope="col">Title</th>
-                  <th scope="col">Authors</th>
-                  <th scope="col">Source</th>
+                  <th scope="col">URL</th>
+                  <th scope="col">Category</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
-                @foreach($stories as $story)
+                @foreach($items as $item)
                 <tr> 
-                  <td><a href="{{ url('story/'.$story->id.'/edit')}}">{{ $story->title}}</a></td>
-                  <td>{{ $story->authors}}</td>
-                  <td>{{ $story->squiffy}}</td>
+                  <td><a href="{{ url('vault/'.$story->id.'/edit')}}">{{ $vault->title}}</a></td>
+                  <td>{{ $vault->url}}</td>
+                  <td>{{ $vault->category}}</td>
                   <td>
-                <form action="{{ route('story.destroy', $story->id)}}" method="post">
+                <form action="{{ route('vault.destroy', $vault->id)}}" method="post">
                    {{ method_field('DELETE') }}
                     {{ csrf_field() }}
                   <button class="btn btn-danger" type="submit">Delete</button>

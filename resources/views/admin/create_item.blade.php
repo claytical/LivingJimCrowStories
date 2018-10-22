@@ -10,30 +10,29 @@
             </nav>
         </div>
         <div class="col-md-9">
-          <h1>Edit Story</h1>
-          <form method="post" action="{{ route('story.update', $story->id) }}">
-            {{ method_field('PATCH') }}
-            {{ csrf_field() }}
+          <h1>New Item</h1>
+          {!! Form::open(['route' => 'vault.store']) !!}
+
             <div class="form-group">
               {!! Form::label('title', 'Title') !!}
-              {!! Form::text('title', $story->title, ['class' => 'form-control']) !!}
+              {!! Form::text('title', null, ['class' => 'form-control']) !!}
             </div>
 
             <div class="form-group">
-              {!! Form::label('authors', 'Authors') !!}
-              {!! Form::text('authors', $story->authors, ['class' => 'form-control']) !!}
+              {!! Form::label('url`', 'URL') !!}
+              {!! Form::text('url', null, ['class' => 'form-control']) !!}
             </div>
 
             <div class="form-group">
               {!! Form::label('description', 'Description') !!}
-              {!! Form::textarea('description', $story->description, ['class' => 'form-control']) !!}
+              {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
             </div>
 
 
             <div class="form-group">
-              {{ Form::select('squiffy', $squiffies, $story->squiffy, ['class' => 'form-control']) }}
+              {{ Form::select('category', $categories, null, ['class' => 'form-control']) }}
             </div>
-            {!! Form::submit('Update Story', ['class' => 'btn btn-info']) !!}
+            {!! Form::submit('Create Item', ['class' => 'btn btn-info']) !!}
 
         {!! Form::close() !!}
 
