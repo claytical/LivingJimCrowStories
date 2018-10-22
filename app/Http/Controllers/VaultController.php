@@ -32,7 +32,7 @@ class VaultController extends Controller
     }  
 
     public function update(Request $request, $id) {
-    	$item = Story::find($id);
+    	$item = VaultItem::find($id);
     	$item->title = $request->title;
     	$item->url = $request->url;
     	$item->description = $request->description;
