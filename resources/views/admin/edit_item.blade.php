@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-9">
           <h1>Edit Item</h1>
-          <form method="post" action="{{ route('vault.update', $vault->id) }}">
+          <form method="post" action="{{ route('vault.update', $item->id) }}">
             {{ method_field('PATCH') }}
             {{ csrf_field() }}
             <div class="form-group">
