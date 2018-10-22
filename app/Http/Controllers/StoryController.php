@@ -40,7 +40,7 @@ class StoryController extends Controller
      	   }
      	} 
 
- 		return view('story_edit', ['story' => $story]);
+ 		return view('edit_story', ['story' => $story]);
     }  
 
     public function update(Request $request, $id) {
