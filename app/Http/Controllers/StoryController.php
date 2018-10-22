@@ -28,11 +28,30 @@ class StoryController extends Controller
     }  
 
 	public function edit($id) {
-
 		$story = Story::find($id);
+		$filesInFolder = \File::files(public_path('js/stories'));     
+    	$squiffies = array();
+    	$squiffies[$story->squiffy] = $story->squiffy;
+    	foreach($filesInFolder as $path) { 
+          $file = pathinfo($path);
+          $existingSquiffy = Story::where('squiffy', '=', $file['filename'])->count();
+          if ($existingSquiffy == 0) {
+    	  	$squiffies[$file['filename']] = $file['filename'];
+     	   }
+     	} 
+
  		return view('story_edit', ['story' => $story]);
     }  
 
+    public function update(Request $request, $id) {
+    	$story = Story::find($id);
+    	$story->title = $request->title;
+    	$story->authors = $request->authors;
+    	$story->description = $request->description;
+    	$story->squiffy = $request->squiffy;
+    	$story->save();
+    	return redirect('admin/stories');
+    }
 	public function create() {
 		$filesInFolder = \File::files(public_path('js/stories'));     
     	$squiffies = array();

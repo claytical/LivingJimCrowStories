@@ -28,4 +28,4 @@ Route::get('/admin/stories', 'StoryController@admin')->name('admin.stories')->mi
 //Route::get('/admin/story/create', 'StoryController@create')->middleware('auth');
 //Route::get('/admin/story/{id}/edit', 'StoryController@edit')->middleware('auth');
 
-Route::resource('story', 'StoryController');
+Route::resource('story', 'StoryController')->middleware('auth');
