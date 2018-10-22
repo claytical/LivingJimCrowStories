@@ -24,10 +24,10 @@
                 @foreach($items as $item)
                 <tr> 
                   <td><a href="{{ url('vault/'.$item->id.'/edit')}}">{{ $vault->title}}</a></td>
-                  <td>{{ $vault->url}}</td>
-                  <td>{{ $vault->category}}</td>
+                  <td>{{ $item->url}}</td>
+                  <td>{{ $item->category}}</td>
                   <td>
-                <form action="{{ route('vault.destroy', $vault->id)}}" method="post">
+                <form action="{{ route('vault.destroy', $item->id)}}" method="post">
                    {{ method_field('DELETE') }}
                     {{ csrf_field() }}
                   <button class="btn btn-danger" type="submit">Delete</button>
