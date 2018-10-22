@@ -23,7 +23,7 @@
               <tbody>
                 @foreach($items as $item)
                 <tr> 
-                  <td><a href="{{ url('vault/'.$story->id.'/edit')}}">{{ $vault->title}}</a></td>
+                  <td><a href="{{ url('vault/'.$item->id.'/edit')}}">{{ $vault->title}}</a></td>
                   <td>{{ $vault->url}}</td>
                   <td>{{ $vault->category}}</td>
                   <td>
