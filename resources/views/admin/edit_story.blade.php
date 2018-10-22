@@ -12,8 +12,8 @@
         <div class="col-md-9">
           <h1>Edit Story</h1>
           <form method="post" action="{{ route('story.update', $story->id) }}">
-        @method('PATCH')
-        @csrf
+            {{ method_field('PATCH') }}
+            {{ csrf_field() }}
             <div class="form-group">
               {!! Form::label('title', 'Title') !!}
               {!! Form::text('title', $story->title, ['class' => 'form-control']) !!}
