@@ -10,7 +10,7 @@
             </nav>
         </div>
         <div class="col-md-9">
-            <a class="btn btn-primary float-right mb-3" href="{{ url('story/create') }}">New Story</a>
+            <a class="btn btn-primary float-right mb-3" href="{{ url('admin/story/create') }}">New Story</a>
             <table class="table">
               <thead class="thead-dark">
                 <tr>
@@ -23,7 +23,7 @@
               <tbody>
                 @foreach($stories as $story)
                 <tr> 
-                  <td><a href="{{ url('story/'.$story->id.'/edit')}}">{{ $story->title}}</a></td>
+                  <td><a href="{{ url('admin/story/'.$story->id.'/edit')}}">{{ $story->title}}</a></td>
                   <td>{{ $story->authors}}</td>
                   <td>{{ $story->squiffy}}</td>
                   <td>

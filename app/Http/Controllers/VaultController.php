@@ -10,6 +10,7 @@ class VaultController extends Controller
 {
     //
   public function create() {
+    $categories = ["1" => "Archival Video", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Website", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping"];
     return view('admin.create_item', ['categories' => $categories]);
     }  
 
@@ -26,7 +27,7 @@ class VaultController extends Controller
 
 	public function edit($id) {
 		$item = VaultItem::find($id);
-
+    $categories = ["1" => "Archival Video", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Website", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping"];
  		return view('admin.edit_item', ['item' => $item, 'categories' => $categories]);
     }  
 
