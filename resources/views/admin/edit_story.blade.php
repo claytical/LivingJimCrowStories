@@ -11,8 +11,9 @@
         </div>
         <div class="col-md-9">
           <h1>Edit Story</h1>
-          {!! Form::open(['route' => 'story.update', $story->id]) !!}
-
+          <form method="post" action="{{ route('story.update', $story->id) }}">
+        @method('PATCH')
+        @csrf
             <div class="form-group">
               {!! Form::label('title', 'Title') !!}
               {!! Form::text('title', $story->title, ['class' => 'form-control']) !!}
