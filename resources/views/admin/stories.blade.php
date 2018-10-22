@@ -17,6 +17,7 @@
                   <th scope="col">Title</th>
                   <th scope="col">Authors</th>
                   <th scope="col">Source</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -25,6 +26,13 @@
                   <td><a href="{{ url('story/'.$story->id.'/edit')}}">{{ $story->title}}</a></td>
                   <td>{{ $story->authors}}</td>
                   <td>{{ $story->squiffy}}</td>
+                  <td>
+                <form action="{{ route('story.destroy', $story->id)}}" method="post">
+                   {{ method_field('DELETE') }}
+                    {{ csrf_field() }}
+                  <button class="btn btn-danger" type="submit">Delete</button>
+                </form>
+                  </td>
                 </tr>
                 @endforeach
               </tbody>
