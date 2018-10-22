@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-9">
           <h1>Edit Story</h1>
-          {!! Form::open(['route' => 'story.update']) !!}
+          {!! Form::open(['route' => 'story.update', $story->id]) !!}
 
             <div class="form-group">
               {!! Form::label('title', 'Title') !!}
