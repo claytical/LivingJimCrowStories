@@ -50,7 +50,7 @@ class StoryController extends Controller
     	$story->description = $request->description;
     	$story->squiffy = $request->squiffy;
     	$story->save();
-    	return redirect('admin/stories');
+    	return redirect('admin/stories')->with('success', 'Stock has been updated');;
     }
 	public function create() {
 		$filesInFolder = \File::files(public_path('js/stories'));     
@@ -73,8 +73,16 @@ class StoryController extends Controller
     	$story->description = $request->description;
     	$story->squiffy = $request->squiffy;
     	$story->save();
-    	return redirect('admin/stories');
+    	return redirect('admin/stories')->with('success', 'Story has been added');;
     }
+
+	public function destroy($id) {
+		$story = Story::find($id);
+		$story->delete();
+    	return redirect('admin/stories')->with('success', 'Story has been removed');;
+    }  
+
+
 	public function admin() {
 		$stories = Story::all();
  		return view('admin.stories', ['stories' => $stories]);

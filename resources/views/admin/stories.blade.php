@@ -22,7 +22,7 @@
               <tbody>
                 @foreach($stories as $story)
                 <tr> 
-                  <td>{{ $story->title}}</td>
+                  <td><a href="{{ url('story/'.$story->id.'/edit')}}">{{ $story->title}}</a></td>
                   <td>{{ $story->authors}}</td>
                   <td>{{ $story->squiffy}}</td>
                 </tr>
