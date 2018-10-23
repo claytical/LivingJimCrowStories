@@ -40,7 +40,5 @@ class User extends Authenticatable
         return $this->belongsToMany('App\VaultItem')->withPivot(['player_vault_items']);
     }
 
-}
-
 
 }
