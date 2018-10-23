@@ -81,7 +81,7 @@ class VaultController extends Controller
         
       }
       else {
-        return response()->json(["response" => "You are not authenticated with a social network and therefore cannot save items to your vault."])
+        return response()->json(["response" => "You are not authenticated with a social network and therefore cannot save items to your vault."]);
       }
   }
 
