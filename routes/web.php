@@ -16,6 +16,7 @@ Route::get ( '/redirect/{service}', 'SocialAuthController@redirect' );
 Route::get ( '/callback/{service}', 'SocialAuthController@callback' );
 Auth::routes();
 
+Route::get('vault', 'VaultController@my_vault')->name('vault')->middleware('auth');
 
 
 /* public story routes */

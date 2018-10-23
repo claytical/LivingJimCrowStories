@@ -60,9 +60,15 @@ class VaultController extends Controller
  		return view('admin.vault', ['items' => $items, 'categories' => $categories]);
     }  
 
+  public function my_vault() {
+    $user = Auth::user();
+    $vault = $user->items();
+    return view('vault', ['vault' => $vault]);
+  }
+
   public function get_json_by_id($id) {
       $item = VaultItem::find($id);
-      $user = $user = Auth::user();
+      $user = Auth::user();
       
       if($user) {
         $items = $user->vault_items();        
