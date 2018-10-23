@@ -37,7 +37,7 @@ class User extends Authenticatable
 
     public function items()
     {
-        return $this->belongsToMany('App\VaultItem')->using('App\PlayerVaultItems');
+        return $this->belongsToMany('App\VaultItem', 'player_vault_items');
     }
 
 }
