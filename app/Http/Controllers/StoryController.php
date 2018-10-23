@@ -50,7 +50,7 @@ class StoryController extends Controller
     	$story->description = $request->description;
     	$story->squiffy = $request->squiffy;
     	$story->save();
-    	return redirect('admin/stories')->with('success', 'Stock has been updated');;
+    	return redirect('admin/stories')->with('success', 'Story has been updated');;
     }
 	public function create() {
 		$filesInFolder = \File::files(public_path('js/stories'));     
