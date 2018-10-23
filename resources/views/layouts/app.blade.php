@@ -15,21 +15,13 @@
     <body>
 
         @section('topnav')
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-              <a class="navbar-brand" href="{{ url('/')}}">Living Jim Crow</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#vault" id="vault_trigger">Vault</a>
-                  </li>
-                </ul>
-                <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
-                </div>
-            </nav>
+            @if (Auth::check())
+              //show logged in navbar
+                <a class="btn" href="{{url('vault')}}"><i class="fas fa-book-reader"></i></a>
+            @else
+                <a class="btn" href="{{ url('redirect/facebook')}}"><i class="fab fa-facebook"></i> Login with Facebook</a>
+              //show logged out navbar
+            @endif
 
         @show
         <main role="main" class="container jim-container">
