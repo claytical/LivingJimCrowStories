@@ -25,26 +25,23 @@ body {
 a.squiffy-link:hover {
 	text-decoration: none;
 	background-color: #B1938B;
+	cursor: pointer;
 }
 
 a.squiffy-link {
-	color: #fff;
+	color: #4E4E56;
 	background-color: transparent;
-	border-color: #4E4E56;
-
 	display: block;
 	width: 100%;
-
+	font-style: italic;
 	padding: .5rem 1rem;
 	font-size: 1.25rem;
 	line-height: 1.5;
-	border-radius: .3rem;
-
+	border-radius: .2rem;
 	font-weight: 400;
-	text-align: center;
 	white-space: nowrap;
 	vertical-align: middle;
-	border: 1px solid transparent;
+	border: 1px solid #4E4E56;
 
 	margin-bottom: 1rem;
 

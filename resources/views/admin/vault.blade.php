@@ -25,7 +25,7 @@
                 <tr> 
                   <td><a href="{{ url('admin/vault/'.$item->id.'/edit')}}">{{ $item->title}}</a></td>
                   <td>{{ $item->url}}</td>
-                  <td>{{ $item->category}}</td>
+                  <td>{{ $categories[$item->category]}}</td>
                   <td>
                 <form action="{{ route('vault.destroy', $item->id)}}" method="post">
                    {{ method_field('DELETE') }}

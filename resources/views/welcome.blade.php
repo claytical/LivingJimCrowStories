@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="row">
-    <img src="logo.svg" class="img-fluid" alt="Living Jim Crow" style="width: 100% \9";>
+    <img src="logo.svg" class="img-fluid mx-auto d-block" alt="Living Jim Crow" style="width: 100% \9";>
 </div>
 
 <div class="row">

@@ -51,7 +51,9 @@ class VaultController extends Controller
 
 	public function index() {
 		$items = VaultItem::all();
- 		return view('admin.vault', ['items' => $items]);
+    $categories = ["1" => "Archival Video", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Website", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping"];
+
+ 		return view('admin.vault', ['items' => $items, 'categories' => $categories]);
     }  
 
 }
