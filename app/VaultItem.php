@@ -8,4 +8,5 @@ class VaultItem extends Model
 {
     //
 	public $timestamps = false;
+
 }

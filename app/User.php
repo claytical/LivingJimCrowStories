@@ -30,5 +30,9 @@ class User extends Authenticatable
     public function accounts(){
         return $this->hasMany('App\LinkedSocialAccount');
     }
-        
+
+    public function vault_items(){
+        return $this->hasMany('App\PlayerVaultItems');
+    }
+
 }
