@@ -33,4 +33,6 @@ Route::resource('admin/story', 'StoryController')->middleware('auth');
 Route::resource('admin/vault', 'VaultController')->middleware('auth');
 
 /* API REQUESTS */
-Route::get('/json/item/{id}', 'VaultController@get_json_by_id');
+Route::get('/get/item/{id}', 'VaultController@get_json_by_id');
+Route::get('/get/category/{category}', 'VaultController@get_json_by_category');
+Route::get('/get/random/item/{category}', 'VaultController@get_json_random_item_by_category');
