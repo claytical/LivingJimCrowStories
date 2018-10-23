@@ -10,16 +10,16 @@
         <link href="https://unpkg.com/js-offcanvas@1.2.8/dist/_css/prefixed/js-offcanvas.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica" rel="stylesheet">
         <link rel="stylesheet" href="/css/jim.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <title>@yield('title')</title>
     </head>
     <body>
 
         @section('topnav')
             @if (Auth::check())
-              //show logged in navbar
-                <a class="btn" href="{{url('vault')}}"><i class="fas fa-book-reader"></i></a>
+                <a class="btn btn-outline-dark float-right p-5" href="{{url('vault')}}"><i class="fas fa-book-reader"></i></a>
             @else
-                <a class="btn" href="{{ url('redirect/facebook')}}"><i class="fab fa-facebook"></i> Login with Facebook</a>
+                <a class="btn btn-outline-dark float-right p-5" href="{{ url('redirect/facebook')}}"><i class="fab fa-facebook"></i> Login with Facebook</a>
               //show logged out navbar
             @endif
 
