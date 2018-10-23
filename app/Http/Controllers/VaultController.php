@@ -59,14 +59,15 @@ class VaultController extends Controller
     }  
 
   public function get_json_by_id($id, $add_to_vault) {
-      if(session()->has('email')) {
+      $user = Socialite::driver('facebook')->user();
+
+      if($user->email) {
         $item = VaultItem::find($id);
-        $email = session('email');
         if($add_to_vault) {
-          $existing_item_count = PlayerVaultItems::where('email', '=', $email)->where('vault_item_id', '=', $id)->count();
+          $existing_item_count = PlayerVaultItems::where('email', '=', $user->email)->where('vault_item_id', '=', $id)->count();
           if($existing_item_count == 0) {
             $player_vault_item = new PlayerVaultItems;
-            $player_vault_items->email = $email;
+            $player_vault_items->email = $user->email;
             $player_vault_items->vault_item_id = $id;
             $player_vault_items->save();
             return response()->json(["response" => "New Item Unlocked!", "item" => $item]);
