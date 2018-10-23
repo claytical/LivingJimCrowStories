@@ -30,3 +30,6 @@ Route::get('/admin/stories', 'StoryController@admin')->name('admin.stories')->mi
 
 Route::resource('admin/story', 'StoryController')->middleware('auth');
 Route::resource('admin/vault', 'VaultController')->middleware('auth');
+
+/* API */
+Route::get('/json/item/{id}/{add_to_vault}', 'VaultController@get_json_by_id');

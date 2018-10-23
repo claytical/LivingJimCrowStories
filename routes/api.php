@@ -17,4 +17,3 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/json/item/{id}/{add_to_vault}', 'VaultController@get_json_by_id');
