@@ -17,8 +17,7 @@
         <div class="col-sm-6">
             <div class="card story-card">
                 <div class="card-body">
-                  <h5 class="card-title">{{ $item->title}}</h5>
-                  <p class="card-text">{{ $item->description }}</p>
+                  <p class="card-text">{{ print_r($item) }}</p>
                 </div>
             </div>
         </div>
