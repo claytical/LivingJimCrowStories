@@ -11,7 +11,7 @@ class SocialAuthController extends Controller
 {
     //
 	public function redirect($service) {
-        return Socialite::driver ( $service )->redirect ();
+        return Socialite::driver ( $service )->stateless(true)->redirect ();
     }
 
 	public function callback(SocialAccountService $accountService, $service) {
@@ -25,7 +25,9 @@ class SocialAuthController extends Controller
 
         $authUser = $accountService->findOrCreate($user, $service);
         auth()->login($authUser, true);
-        return view ( 'authenticated' )->withDetails ( $authUser )->withService ( $service );
+
+        return redirect()->to('/');
+//        return view ( 'authenticated' )->withDetails ( $authUser )->withService ( $service );
 /*        
 
         $user = Socialite::with ( $service )->user ();
