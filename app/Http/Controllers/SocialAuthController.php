@@ -10,10 +10,23 @@ class SocialAuthController extends Controller
 {
     //
 	public function redirect($service) {
-        return Socialite::driver ( $service )->stateless()->redirect ();
+        return Socialite::driver ( $service )->redirect ();
     }
 
-	public function callback($service) {
+	public function callback(\App\SocialAccountsService $accountService, $service) {
+
+        try {
+            $user = Socialite::with($service)->user();
+        }
+        catch (\Exception $e) {
+            return redirect('/login');
+        }
+
+        $authUser = $accountService->findOrCreate($user, $service);
+        auth()->login($authUser, true);
+        return view ( 'authenticated' )->withDetails ( $user )->withService ( $service );
+/*        
+
         $user = Socialite::with ( $service )->user ();
         $player_check = Player::where('email', '=', $user->email)->count();
         if( $player_check == 0) {
@@ -24,6 +37,6 @@ class SocialAuthController extends Controller
         	$player->save();
         }
         session(['email' => $user->email]);
-        return view ( 'authenticated' )->withDetails ( $user )->withService ( $service );
+  */
     }    
 }
