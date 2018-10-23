@@ -10,7 +10,7 @@ class SocialAuthController extends Controller
 {
     //
 	public function redirect($service) {
-        return Socialite::driver ( $service )->redirect ();
+        return Socialite::driver ( $service )->stateless()->redirect ();
     }
 
 	public function callback($service) {
