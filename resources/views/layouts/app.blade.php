@@ -17,10 +17,9 @@
 
         @section('topnav')
             @if (Auth::check())
-                <a class="btn btn-outline-dark float-right p-5" href="{{url('vault')}}"><i class="fas fa-book-reader"></i></a>
+                <a class="btn btn-outline-dark float-right m-2" href="{{url('vault')}}"><i class="fas fa-book-reader"></i></a>
             @else
-                <a class="btn btn-outline-dark float-right p-5" href="{{ url('redirect/facebook')}}"><i class="fab fa-facebook"></i> Login with Facebook</a>
-              //show logged out navbar
+                <a class="btn btn-outline-dark float-right m-2" href="{{ url('redirect/facebook')}}"><i class="fab fa-facebook"></i> Login with Facebook</a>
             @endif
 
         @show
