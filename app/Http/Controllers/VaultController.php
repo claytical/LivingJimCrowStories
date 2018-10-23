@@ -98,7 +98,7 @@ class VaultController extends Controller
 //                          ->whereNotIn('vault_items.id', $user->items->pluck('vault_item_id'))
                           ->get();
       $user_items = $user->items->pluck('vault_item_id');
-      return response()->json(["items" => $items, "user_items" => $user_items);
+      return response()->json(["items" => $items, "user_items" => $user_items]);
   }
 
 
