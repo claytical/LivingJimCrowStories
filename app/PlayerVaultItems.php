@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class PlayerVaultItems extends Pivot;
+class PlayerVaultItems extends Pivot
 {
     //
 	public function user()
