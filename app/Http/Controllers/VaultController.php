@@ -62,7 +62,7 @@ class VaultController extends Controller
 
   public function my_vault() {
     $user = Auth::user();
-    $vault = $user->items();
+    $vault = $user->items;
     return view('vault', ['vault' => $vault]);
   }
 
