@@ -59,34 +59,30 @@ class VaultController extends Controller
  		return view('admin.vault', ['items' => $items, 'categories' => $categories]);
     }  
 
-  public function get_json_by_id($id, $add_to_vault) {
-        $user = Socialite::driver('facebook')->user();
-        $email = $user->getEmail();
-      if($email) {
-        
-        $item = VaultItem::find($id);
-        
-        if($add_to_vault) {
-          $existing_item_count = PlayerVaultItems::where('email', '=', $email)->where('vault_item_id', '=', $id)->count();
-          if($existing_item_count == 0) {
+  public function get_json_by_id($id) {
+      $item = VaultItem::find($id);
+      $user = $user = Auth::user();
+      
+      if($user) {
+        $items = $user->vault_items();        
+        if($items->where('vault_item_id', '=', $id)->count() == 0) {
+          //new item
             $player_vault_item = new PlayerVaultItems;
-            $player_vault_items->email = $email;
+            $player_vault_items->user_id = $user->id;
             $player_vault_items->vault_item_id = $id;
             $player_vault_items->save();
-            return response()->json(["response" => "New Item Unlocked!", "item" => $item]);
+            return response()->json(["response" => "New Item", "item" => $item]);
 
-          }
-          else {
-            //item already in vault
-            return response()->json(["response" => "You have already unlocked this item!", "item" => $item]);
-
-          }
         }
-        
+        else {
+          //exists
+            return response()->json(["response" => "Existing Item", "item" => $item]);
+        }
       }
       else {
-        return response()->json(["response" => "You are not authenticated with a social network and therefore cannot save items to your vault."]);
+            return response()->json(["response" => "Not Saved", "item" => $item]);
       }
+
   }
 
   public function get_json_by_category($id) {
