@@ -31,10 +31,6 @@ class User extends Authenticatable
         return $this->hasMany('App\LinkedSocialAccount');
     }
 
-    public function vault_items(){
-        return $this->hasMany('App\PlayerVaultItems');
-    }
-
     public function items()
     {
         return $this->belongsToMany('App\VaultItem', 'player_vault_items');

@@ -71,7 +71,7 @@ class VaultController extends Controller
       $user = Auth::user();
       
       if($user) {
-        $items = $user->vault_items();        
+        $items = $user->items();        
         if($items->where('vault_item_id', '=', $id)->count() == 0) {
           //new item
             $player_vault_item = new PlayerVaultItems;
@@ -94,11 +94,11 @@ class VaultController extends Controller
 
   public function get_json_by_category($category) {
       $user = Auth::user();
-      $items = VaultItem::where('category', '=', $category)
-//                          ->whereNotIn('vault_items.id', $user->items->pluck('vault_item_id'))
-                          ->get();
       $user_items = $user->items()->pluck('vault_item_id');
-      return response()->json(["items" => $items, "user_items" => $user_items]);
+      $items = VaultItem::where('category', '=', $category)
+                          ->whereNotIn('vault_items.id', $items)
+                          ->get();
+      return response()->json($items);
   }
 
 
