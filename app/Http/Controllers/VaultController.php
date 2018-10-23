@@ -69,9 +69,9 @@ class VaultController extends Controller
         if($items->where('vault_item_id', '=', $id)->count() == 0) {
           //new item
             $player_vault_item = new PlayerVaultItems;
-            $player_vault_items->user_id = $user->id;
-            $player_vault_items->vault_item_id = $id;
-            $player_vault_items->save();
+            $player_vault_item->user_id = $user->id;
+            $player_vault_item->vault_item_id = $id;
+            $player_vault_item->save();
             return response()->json(["response" => "New Item", "item" => $item]);
 
         }
