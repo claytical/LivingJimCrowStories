@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Player;
 use App\PlayerVaultItems;
 use Socialite;
+use Illuminate\Support\Facades\Auth;
 
 class VaultController extends Controller
 {
