@@ -7,6 +7,7 @@ use App\VaultItem;
 use Illuminate\Support\Facades\Storage;
 use App\Player;
 use App\PlayerVaultItems;
+use App\Socialite;
 
 class VaultController extends Controller
 {
@@ -59,11 +60,12 @@ class VaultController extends Controller
     }  
 
   public function get_json_by_id($id, $add_to_vault) {
-
-      if(session()->has('email')) {
-        $item = VaultItem::find($id);
-        $email = session('email');
         $user = Socialite::driver('facebook')->user();
+        $email = $user->getEmail();
+      if($email) {
+        
+        $item = VaultItem::find($id);
+        
         if($add_to_vault) {
           $existing_item_count = PlayerVaultItems::where('email', '=', $email)->where('vault_item_id', '=', $id)->count();
           if($existing_item_count == 0) {
