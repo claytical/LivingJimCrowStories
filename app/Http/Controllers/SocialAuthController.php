@@ -16,11 +16,7 @@ class SocialAuthController extends Controller
 
 	public function callback(SocialAccountService $accountService, $service) {
 
-        try {
-            $user = Socialite::with($service)->user();
-        }
-        catch (\Exception $e) {
-            return redirect('/')->with('success', $e->getMessage());;
+        $user = Socialite::with($service)->user();
         }
 
         $authUser = $accountService->findOrCreate($user, $service);
