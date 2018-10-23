@@ -95,7 +95,7 @@ class VaultController extends Controller
   public function get_json_by_category($category) {
       $user = Auth::user();
       $items = VaultItem::where('category', '=', $category)
-                          ->whereNotIn('id', $user->items->pluck('vault_item_id'))
+                          ->whereNotIn('vault_items.id', $user->items->pluck('vault_item_id'))
                           ->get();
       return response()->json($items);
   }
