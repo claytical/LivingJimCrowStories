@@ -8,5 +8,9 @@ class VaultItem extends Model
 {
     //
 	public $timestamps = false;
-
+    
+    public function users()
+    {
+        return $this->belongsToMany('App\User')->using('App\PlayerVaultItem');
+    }
 }
