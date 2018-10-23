@@ -16,7 +16,7 @@ class SocialAuthController extends Controller
 
 	public function callback(SocialAccountService $accountService, $service) {
 
-        $user = Socialite::with($service)->user();
+        $user = Socialite::with($service)->stateless()->user();
         $authUser = $accountService->findOrCreate($user, $service);
         auth()->login($authUser, true);
 
