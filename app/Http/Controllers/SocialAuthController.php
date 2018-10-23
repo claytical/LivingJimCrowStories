@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Socialite;
 use App\Player;
+use App\SocialAccountService;
 
 class SocialAuthController extends Controller
 {
@@ -13,7 +14,7 @@ class SocialAuthController extends Controller
         return Socialite::driver ( $service )->redirect ();
     }
 
-	public function callback(\App\SocialAccountsService $accountService, $service) {
+	public function callback(SocialAccountService $accountService, $service) {
 
         try {
             $user = Socialite::with($service)->user();
@@ -24,7 +25,7 @@ class SocialAuthController extends Controller
 
         $authUser = $accountService->findOrCreate($user, $service);
         auth()->login($authUser, true);
-        return view ( 'authenticated' )->withDetails ( $user )->withService ( $service );
+        return view ( 'authenticated' )->withDetails ( $authUser )->withService ( $service );
 /*        
 
         $user = Socialite::with ( $service )->user ();
