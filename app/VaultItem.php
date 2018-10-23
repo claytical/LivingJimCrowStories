@@ -11,6 +11,6 @@ class VaultItem extends Model
     
     public function users()
     {
-        return $this->belongsToMany('App\User')->using('App\PlayerVaultItem');
+        return $this->belongsToMany('App\User')->using('App\PlayerVaultItems');
     }
 }
