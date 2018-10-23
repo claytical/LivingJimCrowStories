@@ -26,7 +26,7 @@ class SocialAuthController extends Controller
         $authUser = $accountService->findOrCreate($user, $service);
         auth()->login($authUser, true);
 
-        return redirect()->to('/');
+        return redirect()->to('/')->with('success', "Successful Social Login");
 //        return view ( 'authenticated' )->withDetails ( $authUser )->withService ( $service );
 /*        
 
