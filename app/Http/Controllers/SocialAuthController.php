@@ -20,7 +20,7 @@ class SocialAuthController extends Controller
             $user = Socialite::with($service)->user();
         }
         catch (\Exception $e) {
-            return redirect('/login')->with('success', $e->getMessage());;
+            return redirect('/')->with('success', $e->getMessage());;
         }
 
         $authUser = $accountService->findOrCreate($user, $service);
