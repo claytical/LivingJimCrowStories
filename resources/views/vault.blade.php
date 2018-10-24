@@ -27,7 +27,7 @@
         <div class="col-sm-6">
             <div class="card story-card-locked">
                 <div class="card-body">
-                    <i class="fas fa-lock fa-10x"></i>
+                    <i class="fas fa-lock fa-10x float-right"></i>
                     <h5 class="card-title">{{ $categories[$item->category]}}</h5>
                 </div>
             </div>

@@ -16,6 +16,7 @@
     <body>
 
         @section('topnav')
+            <a class="btn btn-outline-dark float-right m-2" href="{{url('/')}}"><i class="fas fa-home"></i></a>
             @if (Auth::check())
                 <a class="btn btn-outline-dark float-right m-2" href="{{url('vault')}}"><i class="fas fa-book-reader"></i></a>
             @else
