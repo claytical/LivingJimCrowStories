@@ -16,7 +16,7 @@
 
 <div class="row">
   <div class="col-sm-12">    
-    <a id="restart" href="#" class="float-right btn btn-info">Restart</a>
+    <a id="restart" href="#" class="float-right btn btn-outline-dark"><i class="fas fa-redo"></i></a>
     <h1>{{ $story->title}}</h1>
     <h2>{{ $story->authors}}</h2>
       <div id="squiffy"></div>

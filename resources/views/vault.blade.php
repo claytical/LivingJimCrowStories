@@ -15,7 +15,7 @@
 <div class="row">
     @foreach($vault as $item)
         <div class="col-sm-6">
-            <div class="card story-card">
+            <div class="card vault-card">
                 <div class="card-body">
                   <h5 class="card-title">{{ $item->title}}</h5>
                   <p class="card-text">{{ $item->description }}</p>
@@ -25,7 +25,7 @@
     @endforeach
     @foreach($locked as $item)
         <div class="col-sm-6">
-            <div class="card story-card-locked">
+            <div class="card vault-card-locked">
                 <div class="card-body">
                     <i class="fas fa-lock fa-10x float-right"></i>
                     <h5 class="card-title">{{ $categories[$item->category]}}</h5>

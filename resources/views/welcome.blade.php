@@ -19,7 +19,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{ $story->title}}</h5>
                   <p class="card-text">{{ $story->description }}</p>
-                  <a class="btn btn-primary" href="{{ url('play/'.$story->id) }}">Start Story</a>
+                  <a class="btn btn-outline-dark" href="{{ url('play/'.$story->id) }}"><i class="fas fa-play"></i></a>
                 </div>
             </div>
         </div>

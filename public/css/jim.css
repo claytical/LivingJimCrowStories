@@ -10,11 +10,15 @@ body {
 
 .story-card {
 	margin-bottom: 1rem;
+}
+
+.vault-card {
+	margin-bottom: 1rem;
 	background-color: #6e7a73;
 	color: #ffffff;
 }
 
-.story-card-locked {
+.vault-card-locked {
 	margin-bottom: 1rem;
 	background-color: #4E4E56;
 	color: #aaaaaa;
