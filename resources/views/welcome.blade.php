@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="row">
-    <img src="logo.svg" class="img-fluid mx-auto d-block" alt="Living Jim Crow" style="width: 100% \9";>
+    <img src="logo.svg" class="img-fluid mx-auto d-block pb-5" alt="Living Jim Crow" style="width: 100% \9";>
 </div>
 
 <div class="row">
@@ -19,7 +19,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{ $story->title}}</h5>
                   <p class="card-text">{{ $story->description }}</p>
-                  <a class="btn btn-outline-dark" href="{{ url('play/'.$story->id) }}"><i class="fas fa-play"></i></a>
+                  <a class="btn btn-outline-dark float-right" href="{{ url('play/'.$story->id) }}"><i class="fas fa-play"></i></a>
                 </div>
             </div>
         </div>

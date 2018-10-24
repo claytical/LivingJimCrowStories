@@ -15,11 +15,16 @@
 @section('content')
 
 <div class="row">
-  <div class="col-sm-12">    
-    <a id="restart" href="#" class="float-right btn btn-outline-dark"><i class="fas fa-redo"></i></a>
     <h1>{{ $story->title}}</h1>
     <h2>{{ $story->authors}}</h2>
+    <a id="restart" href="#" class="float-right btn btn-outline-dark"><i class="fas fa-redo"></i></a>
+</div>
+<div class="row">
+  <div class="col-sm-6">    
       <div id="squiffy"></div>
+  </div>
+  <div class="col-sm-6">    
+      <img src="scenery/hotel_lobby.png" class="img-fluid"/>
   </div>
 </div>
 
