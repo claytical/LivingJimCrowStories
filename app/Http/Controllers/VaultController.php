@@ -63,9 +63,12 @@ class VaultController extends Controller
   public function my_vault() {
     $user = Auth::user();
     $vault = $user->items;
-    return view('vault', ['vault' => $vault]);
+    $locked_items = VaultItem::whereNotIn('vault_items.id', $vault)->get();
+    $categories = ["1" => "Archival Video", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Web Article", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping", "8" => "Bookmark"];
+    return view('vault', ['vault' => $vault, 'locked' => $locked_items, 'categories' => $categories]);
   }
 
+//RETURN SPECIFIC ITEM BASED ON ID
   public function get_json_by_id($id) {
       $item = VaultItem::find($id);
       $user = Auth::user();
@@ -92,13 +95,23 @@ class VaultController extends Controller
 
   }
 
+//RETURN RANDOM ITEM BASED ON CATEGORY
   public function get_json_by_category($category) {
       $user = Auth::user();
       $user_items = $user->items()->pluck('vault_item_id');
-      $items = VaultItem::where('category', '=', $category)
+      $item = VaultItem::where('category', '=', $category)
                           ->whereNotIn('vault_items.id', $user_items)
-                          ->get();
-      return response()->json($items);
+                          ->inRandomOrder()->first();
+      if($item) {
+        $player_vault_item = new PlayerVaultItems;
+        $player_vault_item->user_id = $user->id;
+        $player_vault_item->vault_item_id = $id;
+        $player_vault_item->save();
+        return response()->json(["response" => "New Item", "item" => $item]);
+      }
+      else {
+        return response()->json(["response" => "No New Items"]);
+      }
   }
 
 

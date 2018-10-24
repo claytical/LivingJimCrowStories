@@ -9,7 +9,7 @@
 
 @section('content')
 <div class="row">
-    <img src="logo.svg" class="img-fluid mx-auto d-block" alt="Living Jim Crow" style="width: 100% \9";>
+    <img src="logo.svg" class="img-fluid mx-auto d-block pb-5" alt="Living Jim Crow" style="width: 100% \9";>
 </div>
 
 <div class="row">
@@ -19,6 +19,16 @@
                 <div class="card-body">
                   <h5 class="card-title">{{ $item->title}}</h5>
                   <p class="card-text">{{ $item->description }}</p>
+                </div>
+            </div>
+        </div>
+    @endforeach
+    @foreach($locked as $item)
+        <div class="col-sm-6">
+            <div class="card story-card-locked">
+                <div class="card-body">
+                    <i class="fas fa-lock fa-10x"></i>
+                    <h5 class="card-title">{{ $categories[$item->category]}}</h5>
                 </div>
             </div>
         </div>
