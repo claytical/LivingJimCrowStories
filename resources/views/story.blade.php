@@ -22,7 +22,7 @@
     <div class="c-offcanvas-content-wrap">
         <a href="#vault" id="triggerButton">Close</a>
     </div>
-    
+
   </div>
 </div>
 <div class="row">
@@ -64,7 +64,7 @@
 //                });
                 $('#vault').offcanvas({
                     modifiers: 'right, overlay', // default options
-                    triggerButton: '#vault_trigger' // btn to open offcanvas
+//                    triggerButton: '#vault_trigger' // btn to open offcanvas
                 });
                 vault = $('#vault').data('offcanvas-component');          
 
