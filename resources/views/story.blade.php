@@ -30,8 +30,8 @@
   <div class="col-sm-6">    
       <div id="squiffy"></div>
   </div>
-  <div class="col-sm-6">    
-      <img src="/scenery/hotel_lobby.png" class="img-fluid"/>
+  <div class="col-sm-6" id="scene">    
+
   </div>
 </div>
 
@@ -53,16 +53,7 @@
             });
 
             $(function($){
-//                $('#vault_button').click(toggleVault);
                 squif = $('#squiffy').squiffy();
-//                var restart = function () {
-//                    $('#squiffy').squiffy('restart');
-//                };
-//                $('#restart').click(restart);
-//                $('#restart').keypress(function (e) {
-//                    if (e.which !== 13) return;
-//                    restart();
-//                });
                 $('#vault').offcanvas({
                     modifiers: 'right, overlay', // default options
                     triggerButton: '#vault_trigger' // btn to open offcanvas

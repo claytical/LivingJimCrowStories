@@ -82,7 +82,7 @@ class SceneController extends Controller
   public function get_json_by_id($id) {
       $scene = Scene::find($id);
       if($scene) {
-        return response()->json(["response" => "OK", "scene" => $scene]);
+        return response()->json(["response" => "OK", "scene" => url('scenery/' + $scene)]);
       }
       else {
         return response()->json(["response" => "Scene Unavailable"]);
