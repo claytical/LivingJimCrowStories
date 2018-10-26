@@ -25,12 +25,15 @@ Route::get('/play/{id}', 'StoryController@show');
 
 /* admin routes*/
 Route::get('/admin/stories', 'StoryController@admin')->name('admin.stories')->middleware('auth');
+Route::get('/admin/scenes', 'SceneController@index')->name('admin.stories')->middleware('auth');
+
 //Route::put('admin/story/store', 'StoryController@store')->name('admin.stories.store')->middleware('auth');
 //Route::get('/admin/story/create', 'StoryController@create')->middleware('auth');
 //Route::get('/admin/story/{id}/edit', 'StoryController@edit')->middleware('auth');
 
 Route::resource('admin/story', 'StoryController')->middleware('auth');
 Route::resource('admin/vault', 'VaultController')->middleware('auth');
+Route::resource('admin/scene', 'SceneController')->middleware('auth');
 
 /* API REQUESTS */
 Route::get('/get/item/{id}', 'VaultController@get_json_by_id');
