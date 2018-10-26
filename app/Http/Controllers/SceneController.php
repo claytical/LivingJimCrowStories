@@ -23,7 +23,7 @@ class SceneController extends Controller
          }
       } 
 
-    return view('admin.create_scene', ['categories' => $categories]);
+    return view('admin.create_scene', ['categories' => $categories, 'scenery' => $scenery]);
     }  
 
     public function store(Request $request) {
