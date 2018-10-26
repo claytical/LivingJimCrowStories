@@ -26,7 +26,7 @@ function format_and_add_item(data) {
 }
 
 function format_scene(data) {
-	var html =  "<img class='img-fluid' src='" + data.scene.filename + "''/>";
+	var html =  "<img class='img-fluid' src='" + data.scene + "''/>";
 	$("#scene").html(html);
 }
 
