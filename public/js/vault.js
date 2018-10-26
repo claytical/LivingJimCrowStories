@@ -29,6 +29,22 @@ function toggleVault() {
 	}
 }
 
+function unlock(item_id) {
+	//call to API
+}
+
+function unlock_random(category_id) {
+
+}
+
+function scene(scene_id) {
+
+}
+
+function scene_by_category(category_id) {
+	
+}
+
 function unlock(item) {
 	console.log("Unlocking " + item);
 	$('.item .new-item').removeClass('.new-item');

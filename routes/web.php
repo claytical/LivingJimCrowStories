@@ -38,7 +38,6 @@ Route::resource('admin/scene', 'SceneController')->middleware('auth');
 /* API REQUESTS */
 Route::get('/get/scene/{id}', 'SceneController@get_json_by_id');
 Route::get('/get/scene/category/{category}', 'SceneController@get_json_random_by_category');
-Route::get('/get/item/{id}', 'VaultController@get_json_by_id');
-Route::get('/get/category/{category}', 'VaultController@get_json_by_category');
 
+Route::get('/get/item/{id}', 'VaultController@get_json_by_id');
 Route::get('/get/random/item/{category}', 'VaultController@get_json_random_item_by_category');

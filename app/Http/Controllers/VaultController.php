@@ -96,7 +96,7 @@ class VaultController extends Controller
   }
 
 //RETURN RANDOM ITEM BASED ON CATEGORY
-  public function get_json_by_category($category) {
+  public function get_json_random_item_by_category($category) {
       $user = Auth::user();
       $user_items = $user->items()->pluck('vault_item_id');
       $item = VaultItem::where('category', '=', $category)
