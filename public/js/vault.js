@@ -31,17 +31,30 @@ function toggleVault() {
 var jd;
 function unlock(item_id) {
 	//call to API
-	$.getJSON( "http://livingjimcrow.app//get/item/" + item_id, function( data ) {
-		jd = data;
+	$.getJSON( "https://livingjimcrow.app/get/item/" + item_id, function( data ) {
+		format_and_add_item(data);
 		});
-
-//	var new_item = $("#vault_content").prepend(html);
 
 }
 
 function unlock_random(category_id) {
+	$.getJSON( "https://livingjimcrow.app/get/random/item/" + item_id, function( data ) {
+		format_and_add_item(data);
+		});
 
 }
+
+function format_and_add_item(data) {
+		var html =  "<div class='row'>";
+		html += "<div class='col-sm-12'>";
+		html += "<h3>" + data.item.title + "</h3>";
+		html += "</div>";
+		html += "<div class='col-sm-6'><p>" + data.item.description + "</p></div>";
+		html += "<div class='col-sm-6'><a class='btn btn-info btn-block btn-lg' href='" + data.item.url + "'><i class='fas fa-eye'></i>/a></div>";
+		html += "</div>";
+		$("#vault_content").prepend(html);
+}
+
 
 function scene(scene_id) {
 
