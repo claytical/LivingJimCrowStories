@@ -13,7 +13,7 @@
         </div>
         <div class="col-md-9">
           <h1>Edit Scene</h1>
-          <form method="post" action="{{ route('scenee.update', $scene->id) }}">
+          <form method="post" action="{{ route('scene.update', $scene->id) }}">
             {{ method_field('PATCH') }}
             {{ csrf_field() }}
             <div class="form-group">
