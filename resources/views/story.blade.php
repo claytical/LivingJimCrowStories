@@ -6,6 +6,10 @@
     @parent
     <!-- additional topnav-->    
     <aside id="vault">
+      <div class="c-offcanvas-content-wrap">
+          <a href="#vault" id="vault_trigger">x</a>
+      </div>
+      
          <h2>Vault</h2>
          <div id="vault_content"></div>
     </aside>
@@ -19,9 +23,6 @@
     <h1>{{ $story->title}}</h1>
     <h2>{{ $story->authors}}</h2>
     <a id="restart" href="#" class="float-right btn btn-outline-dark"><i class="fas fa-redo"></i></a>
-    <div class="c-offcanvas-content-wrap">
-        <a href="#vault" id="vault_trigger">Close</a>
-    </div>
 
   </div>
 </div>
