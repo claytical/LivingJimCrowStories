@@ -56,7 +56,7 @@ class SceneController extends Controller
     public function update(Request $request, $id) {
     	$scene = Scene::find($id);
     	$scene->title = $request->title;
-    	$scene->url = $request->url;
+    	$scene->filename = $request->filename;
     	$scene->category = $request->category;
     	$scene->save();
     	return redirect('admin/scenes')->with('success', 'Scene has been updated');;
