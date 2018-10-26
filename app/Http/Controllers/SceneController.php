@@ -11,7 +11,7 @@ class SceneController extends Controller
 {
     //
   public function create() {
-    $categories = ["1" => "Baseball Game", "2" => "Travel", "3" => "Dining", "4" => "Accomodations"];
+    $categories = ["1" => "Baseball Game", "2" => "Travel", "3" => "Dining", "4" => "Accomodations", "5" => "Medical"];
     $filesInFolder = \File::files(public_path('scenery'));     
       $scenery = array();
       $scenery["unassigned"] = "Please Select a Art File";
@@ -38,7 +38,7 @@ class SceneController extends Controller
 
 	public function edit($id) {
 		$scene = Scene::find($id);
-    $categories = ["1" => "Baseball Game", "2" => "Travel", "3" => "Dining", "4" => "Accomodations"];
+    $categories = ["1" => "Baseball Game", "2" => "Travel", "3" => "Dining", "4" => "Accomodations","5" => "Medical"];
     $filesInFolder = \File::files(public_path('scenery'));     
       $scenery = array();
       $scenery[$scene->filename] = $scene->filename;
@@ -72,7 +72,7 @@ class SceneController extends Controller
 
 	public function index() {
 		$scenes = Scene::all();
-    $categories = ["1" => "Baseball Game", "2" => "Travel", "3" => "Dining", "4" => "Accomodations"];
+    $categories = ["1" => "Baseball Game", "2" => "Travel", "3" => "Dining", "4" => "Accomodations", "5" => "Medical"];
 
  		return view('admin.scenes', ['scenes' => $scenes, 'categories' => $categories]);
     }  
