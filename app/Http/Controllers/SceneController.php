@@ -48,6 +48,7 @@ class SceneController extends Controller
           if ($existingScene == 0) {
           $scenery[$file['basename']] = $file['basename'];
          }
+       }
 
  		return view('admin.edit_scene', ['scene' => $scene, 'scenery' => $scenery, 'categories' => $categories]);
     }  
