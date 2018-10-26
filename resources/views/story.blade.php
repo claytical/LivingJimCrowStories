@@ -7,9 +7,9 @@
     <!-- additional topnav-->    
     <aside id="vault">
       <div class="c-offcanvas-content-wrap">
-          <a href="#vault" id="vault_trigger">x</a>
+          <a href="#vault" id="vault_trigger" class="btn btn-dark-outline btn-sm float-right"><i class="far fa-times-circle"></i></a>
       </div>
-      
+
          <h2>Vault</h2>
          <div id="vault_content"></div>
     </aside>
