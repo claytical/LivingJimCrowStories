@@ -90,7 +90,7 @@ class SceneController extends Controller
   }
 
 //RETURN RANDOM ITEM BASED ON CATEGORY
-  public function get_json_by_category($category) {
+  public function get_json_random_by_category($category) {
       $scene = Scene::where('category', '=', $category)
                           ->inRandomOrder()->first();
       if($scene) {
