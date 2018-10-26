@@ -25,7 +25,7 @@
                 @foreach($scenes as $scene)
                 <tr> 
                   <td><a href="{{ url('admin/scene/'.$scene->id.'/edit')}}">{{ $scene->title}}</a></td>
-                  <td>{{ $story->filename}}</td>
+                  <td>{{ $scene->filename}}</td>
                   <td>{{ $categories[$scene->category]}}</td>
                   <td>
                 <form action="{{ route('scene.destroy', $scene->id)}}" method="post">
