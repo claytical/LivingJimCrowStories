@@ -17,7 +17,7 @@
         <div class="col-sm-6">
             <div class="card vault-card">
                 <div class="card-body">
-                  <img src="{{ url('/icons/' . $icons[$item->category] . )}}" width=100 class="float-right" />
+                  <img src="{{ url('/icons/' . $icons[$item->category] )}}" width=100 class="float-right" />
                   <h5 class="card-title">{{ $item->title}}</h5>
                   <p class="card-text">{{ $item->description }}</p>
                 </div>
