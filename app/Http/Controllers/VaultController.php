@@ -15,8 +15,6 @@ class VaultController extends Controller
     //
   public function create() {
     $categories = ["1" => "Archival Video", "2" => "image.png", "3" => "audio.png", "4" => "article.png", "5" => "greenbook.png", "6" => "video.png", "7" => "printmedia.png", "8" => "unlock.png"];
-    $icons = ["1" => "video.png", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Web Article", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping", "8" => "Bookmark"];
-
     return view('admin.create_item', ['categories' => $categories]);
     }  
 
@@ -58,8 +56,9 @@ class VaultController extends Controller
 	public function index() {
 		$items = VaultItem::all();
     $categories = ["1" => "Archival Video", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Web Article", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping", "8" => "Bookmark"];
+    $icons = ["1" => "video.png", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Web Article", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping", "8" => "Bookmark"];
 
- 		return view('admin.vault', ['items' => $items, 'categories' => $categories]);
+ 		return view('admin.vault', ['items' => $items, 'categories' => $categories, 'icons' => $icons]);
     }  
 
   public function my_vault() {
@@ -67,7 +66,9 @@ class VaultController extends Controller
     $vault = $user->items;
     $locked_items = VaultItem::whereNotIn('vault_items.id', $vault)->get();
     $categories = ["1" => "Archival Video", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Web Article", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping", "8" => "Bookmark"];
-    return view('vault', ['vault' => $vault, 'locked' => $locked_items, 'categories' => $categories]);
+    $icons = ["1" => "video.png", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Web Article", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping", "8" => "Bookmark"];
+
+    return view('vault', ['vault' => $vault, 'locked' => $locked_items, 'categories' => $categories, 'icons' => $icons]);
   }
 
 //RETURN SPECIFIC ITEM BASED ON ID
