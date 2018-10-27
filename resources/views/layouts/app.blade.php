@@ -17,8 +17,7 @@
 
         @section('topnav')
             @if (Auth::check())
-                <a class="btn float-right m-2" href="{{url('vault')}}"><img width="50" src="{{ url('icons/vault.png')}}"/></a>
-
+                <a class="btn float-right m-2" href="#" id="vault_link"><img width="50" src="{{ url('icons/vault.png')}}"/></a>
             @else
                 <a class="btn btn-outline-dark float-right m-2" href="{{ url('redirect/facebook')}}"><i class="fab fa-facebook"></i> Login with Facebook</a>
             @endif
@@ -34,6 +33,7 @@
 
             @yield('content')
         </main>
+
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

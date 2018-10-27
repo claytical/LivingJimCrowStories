@@ -11,6 +11,7 @@
       </div>
 
          <h2>Vault</h2>
+         <a href="{{url('vault')}}" class='btn btn-md float-right'>Expand</a>
          <div id="vault_content"></div>
     </aside>
 
@@ -56,7 +57,7 @@
                 squif = $('#squiffy').squiffy();
                 $('#vault').offcanvas({
                     modifiers: 'right, overlay', // default options
-                    triggerButton: '#vault_trigger' // btn to open offcanvas
+                    triggerButton: '#vault_link' // btn to open offcanvas
                 });
                 vault = $('#vault').data('offcanvas-component');          
 

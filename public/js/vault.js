@@ -4,14 +4,27 @@ function unlock(item_id) {
 	$.getJSON( "https://livingjimcrow.app/get/item/" + item_id, function( data ) {
 		format_and_add_item(data);
 		});
-	vault.open();
+	add_vault_notification();
 }
 
 function unlock_random(category_id) {
 	$.getJSON( "https://livingjimcrow.app/get/random/item/" + item_id, function( data ) {
 		format_and_add_item(data);
 		});
-	vault.open();
+	add_vault_notification();
+}
+
+function add_vault_notification() {
+	var vl = $("#vault_link");
+	var vl_count = vl.children(".badge-vault-text").text();
+	if(vl_count) {
+		vl_count++;
+		$("#vault_link .badge-vault").text(vl_count);
+	}
+	else {
+		$("#vault_link").append("<span class='badge-vault badge-vault-text'>1</span>");
+
+	}
 }
 
 function format_and_add_item(data) {

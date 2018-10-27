@@ -34,6 +34,22 @@ body {
     padding: 1rem;
 }
 
+.btn .badge-vault {
+    position: relative;
+    top: -15px;
+    left: -20px;
+    border: solid 1px #4E4E56;
+}
+
+.badge-vault-text {
+    color: white;
+    background-color: #8DC2BC;
+    opacity: ;
+    font-weight: 100;
+    padding-bottom: 8px;
+}
+
+
 .c-offcanvas--right {
 	width: 40em;
 }
