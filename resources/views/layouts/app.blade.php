@@ -17,12 +17,12 @@
 
         @section('topnav')
             @if (Auth::check())
-                <a class="btn btn-outline-dark float-right m-2" href="{{url('vault')}}"><img src="{{ url('icons/vault.png')}}"/></a>
+                <a class="btn float-right m-2" href="{{url('vault')}}"><img width="50" src="{{ url('icons/vault.png')}}"/></a>
 
             @else
                 <a class="btn btn-outline-dark float-right m-2" href="{{ url('redirect/facebook')}}"><i class="fab fa-facebook"></i> Login with Facebook</a>
             @endif
-            <a class="btn btn-outline-dark float-right m-2" href="{{url('/')}}"><img src="{{ url('icons/home.png')}}"/></a>
+            <a class="btn float-right m-2" href="{{url('/')}}"><img width="50" src="{{ url('icons/home.png')}}"/></a>
 
         @show
         <main role="main" class="container jim-container">

@@ -22,7 +22,7 @@
   <div class="col-sm-12">
     <h1>{{ $story->title}}</h1>
     <h2>{{ $story->authors}}</h2>
-    <a id="restart" href="#" class="float-right btn btn-outline-dark"><img src="{{ url('icons/restart.png')}}"/></a>
+    <a id="restart" href="#" class="float-right btn btn-outline-dark"><img width="50" src="{{ url('icons/restart.png')}}"/></a>
 
   </div>
 </div>
