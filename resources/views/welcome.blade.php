@@ -42,6 +42,10 @@
     <script>
       var vault;
         $(function($){
+          $('#vault').offcanvas({
+              modifiers: 'right, overlay', // default options
+              triggerButton: '#vault_link' // btn to open offcanvas
+          });
           vault = $('#vault').data('offcanvas-component');          
 
       });
