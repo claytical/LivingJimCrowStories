@@ -2,13 +2,16 @@ body {
 	background-color: #DCD0C0;
 	background-image: url("/bg/ricepaper.jpg");
 	font-family: 'IM Fell DW Pica', serif;
+	color: #4E4E56;
 }
 
 .jim-container {
   padding: 5rem 1.5rem;
  
 }
-
+.scene {
+	box-shadow: -5px 5px 10px 0px;
+}
 .story-card {
 	margin-bottom: 1rem;
 }
@@ -26,8 +29,7 @@ body {
 }
 
 #vault {
-    background: black;
-    color: white;
+    background-image: url("/bg/ricepaper2.jpg");
     z-index: 9999;
     padding: 1rem;
 }
