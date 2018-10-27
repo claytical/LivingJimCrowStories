@@ -22,7 +22,7 @@ function add_vault_notification() {
 		$("#vault_link .badge-vault").text(vl_count);
 	}
 	else {
-		$("#vault_link img").append("<span class='badge-vault badge-vault-text'>1</span>");
+		$("#vault_link").append("<span class='badge badge-vault badge-vault-text'>1</span>");
 
 	}
 }
