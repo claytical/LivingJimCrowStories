@@ -80,3 +80,11 @@ a.squiffy-link {
 a.squiffy-link.disabled {
 	opacity: .65;
 }
+
+a.vault-header {
+	color: #4E4E56;
+}
+
+a.vault-header:hover {
+	color: #6E7A73;
+}

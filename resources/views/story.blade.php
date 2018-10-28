@@ -7,11 +7,12 @@
     <!-- additional topnav-->    
     <aside id="vault">
       <div class="c-offcanvas-content-wrap">
-          <a href="#vault" id="vault_trigger" class="btn btn-dark-outline btn-sm float-right"><i class="far fa-times-circle"></i></a>
+          <a href="#vault" id="vault_trigger" class="vault-header btn btn-dark-outline btn-sm float-right"><i class="fas fa-times"></i></a>
+          <a href="{{url('vault')}}" class='vault-header btn btn-md float-right'><i class="fas fa-expand"></i></a>
       </div>
 
          <h2>Vault</h2>
-         <a href="{{url('vault')}}" class='btn btn-md float-right'>Expand</a>
+         
          <div id="vault_content"></div>
     </aside>
 
