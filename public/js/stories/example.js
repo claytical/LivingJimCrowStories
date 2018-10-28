@@ -626,22 +626,31 @@ var set = squiffy.set;
 
 
 squiffy.story.start = '_default';
-squiffy.story.id = 'cd9cb8f195';
+squiffy.story.id = '01a7743b4b';
 squiffy.story.sections = {
 	'_default': {
 		'text': "<p>You are a black baseball player in the triple A league, the highest minor league level before the major league. You develop a simple shin splint, an injury that is common among runners, and players who must stop quickly (e.g, tennis players, baseball players).</p>\n<p>You notice that your lower right leg has been throbbing and tender after your practices.</p>\n<p><a class=\"squiffy-link link-section\" data-section=\"Ignore it\" role=\"link\" tabindex=\"0\">Ignore it</a>\n<a class=\"squiffy-link link-section\" data-section=\"Go to the team doctor\" role=\"link\" tabindex=\"0\">Go to the team doctor</a></p>",
+		'js': function() {
+			scene(1);
+		},
 		'passages': {
 		},
 	},
 	'Ignore it': {
 		'clear': true,
 		'text': "<p>You&#39;ve never experienced this and aren&#39;t in a great amount of pain, so you decide to ignore it. You wouldn&#39;t want to risk being benched for too long and you want to demonstrate that you have great perseverance.</p>\n<p>You feel lonely hiding the secret about this injury. You wish you could confide in someone. One of your teammates, a white player named Danny, had a similar injury last season. You think he may be able to give you some helpful tips about how to recover faster.</p>\n<p><a class=\"squiffy-link link-section\" data-section=\"Talk to Danny about the injury\" role=\"link\" tabindex=\"0\">Talk to Danny about the injury</a>\n<a class=\"squiffy-link link-section\" data-section=\"Keep quiet and continue to ignore it\" role=\"link\" tabindex=\"0\">Keep quiet and continue to ignore it</a></p>",
+		'js': function() {
+			scene(2);
+		},
 		'passages': {
 		},
 	},
 	'Keep quiet and continue to ignore it': {
 		'clear': true,
 		'text': "<p>After months and months of working with this hurt muscle.\n<a class=\"squiffy-link link-section\" data-section=\"It gets worse\" role=\"link\" tabindex=\"0\">It gets worse</a></p>",
+		'js': function() {
+			scene(1);
+		},
 		'passages': {
 		},
 	},
@@ -660,6 +669,9 @@ squiffy.story.sections = {
 	'You sit out a game': {
 		'clear': true,
 		'text': "<p>Your performance is worsening.</p>\n<p><a class=\"squiffy-link link-section\" data-section=\"You tell your coach you need to sit out another game\" role=\"link\" tabindex=\"0\">You tell your coach you need to sit out another game</a>.</p>",
+		'js': function() {
+			scene(2);
+		},
 		'passages': {
 		},
 	},
@@ -672,6 +684,9 @@ squiffy.story.sections = {
 	'You play a game even though you are in a lot of pain': {
 		'clear': true,
 		'text': "<p>You step onto the field. You&#39;re proud of yourself for pushing through. However as soon as you sprint to catch the ball, you feel pins and needles. A pain courses through your body. You keep runing. The pain grows.</p>\n<p>You collapse in the field.</p>\n<p>The team doctor puts you a stretcher and they escort you off the field. After the game the coach comes to talk to you. He lets you know that he has noticed that you&#39;re playing worse lately. Given what happened in the game today, the team can no longer afford having you. They just don&#39;t have time to wait for your recovery. Your coach sees you as a low value player and decides to demote you to the D league team. </p>\n<p><a class=\"squiffy-link link-section\" data-section=\"You go to a lower league\" role=\"link\" tabindex=\"0\">You go to a lower league</a>. </p>",
+		'js': function() {
+			scene(1);
+		},
 		'passages': {
 		},
 	},
@@ -706,7 +721,8 @@ squiffy.story.sections = {
 		'clear': true,
 		'text': "<p>The team doctor, Dr. Greenbaum, is white. There&#39;s a sentiment among the African American community of distrust of hospitals and doctors so you&#39;re wary of trusting this guy.</p>\n<p>However, after awhile, the radiating pain from your shin and calf starts to hurt not just after, but also during warmups and practice.</p>\n<p><a class=\"squiffy-link link-section\" data-section=\"Ignore it\" role=\"link\" tabindex=\"0\">Ignore it</a>\n<a class=\"squiffy-link link-section\" data-section=\"Go back to Dr. Greenbaum\" role=\"link\" tabindex=\"0\">Go back to Dr. Greenbaum</a></p>",
 		'js': function() {
-			unlock("nih1");
+			scene(5);
+			unlock(2);
 		},
 		'passages': {
 		},
@@ -715,7 +731,8 @@ squiffy.story.sections = {
 		'clear': true,
 		'text': "<p>The doctor tells you that your knee can be fixed through surgery. He hands you several sheets of paper to sign.</p>\n<p><a class=\"squiffy-link link-section\" data-section=\"Sign the papers\" role=\"link\" tabindex=\"0\">Sign the papers</a>\n<a class=\"squiffy-link link-section\" data-section=\"Refuse to sign as the papers seem excessive\" role=\"link\" tabindex=\"0\">Refuse to sign as the papers seem excessive</a></p>",
 		'js': function() {
-			unlock("nejm1");
+			scene(5);
+			unlock(3);
 		},
 		'passages': {
 		},
@@ -724,7 +741,7 @@ squiffy.story.sections = {
 		'clear': true,
 		'text': "<p>You go under surgery. When you wake up you feel hazy, but the pain is dulled. The hospital tells you to leave without allowing you to recover fully in the hospital&#39;s custody.</p>\n<p>You have not fully recovered but they&#39;re pushing you out. Your injury does not get better. You have no choice.</p>\n<p><a class=\"squiffy-link link-section\" data-section=\"Recover by yourself at home\" role=\"link\" tabindex=\"0\">Recover by yourself at home</a></p>",
 		'js': function() {
-			unlock("newyorker1");
+			unlock(4);
 		},
 		'passages': {
 		},
@@ -739,7 +756,7 @@ squiffy.story.sections = {
 		'clear': true,
 		'text': "<p>You decide to go to a black doctor. The doctor tells you that you were suffering from a shin splint due to excessive running during practice and training. Your shin splint developed into a stress fracture.</p>\n<p>All you need to do is rest, ice and elevate your shin and calf after practice. He suggests that you don&#39;t run as intensely and work on anaerobic exercises for a couple of months. He gives you several stretchnig exercises and prescribes you calcium and vitamin D.</p>\n<p>Now that you&#39;re fully recovered you can return to working on making it to the major leagues!</p>",
 		'js': function() {
-			unlock("finished_injury");
+			unlock(5);
 		},
 		'passages': {
 		},
