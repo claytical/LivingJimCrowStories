@@ -32,7 +32,9 @@ function format_and_add_item(data) {
 		html += "<div class='col-sm-12'>";
 		html += "<h3>" + data.item.title + "</h3>";
 		html += "</div>";
-		html += "<div class='col-sm-10'><p>" + data.item.description + "</p></div>";
+		html += "<div class='col-sm-10'>";
+		html += "<img src='" + data.icon + "' width='50' class='float-left'/>";
+		html += "<p>" + data.item.description + "</p></div>";
 		html += "<div class='col-sm-2'><a class='btn btn-info btn-block btn-lg' href='" + data.item.url + "'><i class='fas fa-eye'></i></a></div>";
 		html += "</div>";
 		$("#vault_content").prepend(html);

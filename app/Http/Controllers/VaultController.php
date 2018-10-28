@@ -75,25 +75,26 @@ class VaultController extends Controller
   public function get_json_by_id($id) {
       $item = VaultItem::find($id);
       $user = Auth::user();
-      
+      $icons = ["1" => "video.png", "2" => "image.png", "3" => "audio.png", "4" => "article.png", "5" => "greenbook.png", "6" => "video.png", "7" => "printmedia.png", "8" => "unlock.png"];
+      $icon = url('icons/' . $icons[$item->category]);
       if($user) {
-        $items = $user->items();        
+        $items = $user->items(); 
         if($items->where('vault_item_id', '=', $id)->count() == 0) {
           //new item
             $player_vault_item = new PlayerVaultItems;
             $player_vault_item->user_id = $user->id;
             $player_vault_item->vault_item_id = $id;
             $player_vault_item->save();
-            return response()->json(["response" => "New Item", "item" => $item]);
+            return response()->json(["response" => "New Item", "item" => $item, "icon" => $icon]);
 
         }
         else {
           //exists
-            return response()->json(["response" => "Existing Item", "item" => $item]);
+            return response()->json(["response" => "Existing Item", "item" => $item, "icon" => $icon]);
         }
       }
       else {
-            return response()->json(["response" => "Not Saved", "item" => $item]);
+            return response()->json(["response" => "Not Saved", "item" => $item, "icon" => $icon]);
       }
 
   }
@@ -105,12 +106,15 @@ class VaultController extends Controller
       $item = VaultItem::where('category', '=', $category)
                           ->whereNotIn('vault_items.id', $user_items)
                           ->inRandomOrder()->first();
+      $icons = ["1" => "video.png", "2" => "image.png", "3" => "audio.png", "4" => "article.png", "5" => "greenbook.png", "6" => "video.png", "7" => "printmedia.png", "8" => "unlock.png"];
+      $icon = url('icons/' . $icons[$item->category]);
+
       if($item) {
         $player_vault_item = new PlayerVaultItems;
         $player_vault_item->user_id = $user->id;
         $player_vault_item->vault_item_id = $id;
         $player_vault_item->save();
-        return response()->json(["response" => "New Item", "item" => $item]);
+        return response()->json(["response" => "New Item", "item" => $item, "icon" => $icon]);
       }
       else {
         return response()->json(["response" => "No New Items"]);
