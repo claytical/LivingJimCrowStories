@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'StoryController@welcome')->name('welcome');
+Route::get('privacy', 'HomeController@privacy')->name('privacy');
 Route::get ( '/redirect/{service}', 'SocialAuthController@redirect' );
 Route::get ( '/callback/{service}', 'SocialAuthController@callback' );
 Auth::routes();
