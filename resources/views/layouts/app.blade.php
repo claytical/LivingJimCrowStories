@@ -27,7 +27,7 @@
             @if(\Request::is('play/*'))
                 <a id="restart" href="#" class="m-2"><img width="50" src="{{ url('icons/restart.png')}}"/></a>
             @endif
-            <img src="logo.svg" class="logo" alt="Living Jim Crow"/>
+            <img src="{{url('/logo.svg')}}" class="logo" alt="Living Jim Crow"/>
 
             </nav>
         @show
