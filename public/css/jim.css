@@ -5,12 +5,21 @@ body {
 	color: #4E4E56;
 }
 
+.logo {
+	height: 50px;
+	float: right;
+}
+nav {
+	padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+}
 .jim-container {
   padding: 5rem 1.5rem;
  
 }
 .scene {
-	box-shadow: -5px 5px 10px 0px;
+/*	box-shadow: -5px 5px 10px 0px;*/
 }
 .story-card {
 	margin-bottom: 1rem;

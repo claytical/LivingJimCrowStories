@@ -16,13 +16,20 @@
     <body>
 
         @section('topnav')
+            <nav>
+            <a class="m-2" href="{{url('/')}}"><img width="50" src="{{ url('icons/home.png')}}"/></a>
             @if (Auth::check())
-                <a class="btn float-right m-2" href="#" id="vault_link"><img width="50" src="{{ url('icons/vault.png')}}"/></a>
+                <a class="m-2" href="#" id="vault_link"><img width="50" src="{{ url('icons/vault.png')}}"/></a>
             @else
                 <a class="btn btn-outline-dark float-right m-2" href="{{ url('redirect/facebook')}}"><i class="fab fa-facebook"></i> Login with Facebook</a>
             @endif
-            <a class="btn float-right m-2" href="{{url('/')}}"><img width="50" src="{{ url('icons/home.png')}}"/></a>
+            
+            @if(\Request::is('play/*'))
+                <a id="restart" href="#" class="m-2"><img width="50" src="{{ url('icons/restart.png')}}"/></a>
+            @endif
+            <img src="logo.svg" class="logo" alt="Living Jim Crow"/>
 
+            </nav>
         @show
         <main role="main" class="container jim-container">
             @if(session()->get('success'))

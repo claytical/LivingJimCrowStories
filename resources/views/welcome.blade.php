@@ -8,9 +8,6 @@
 @endsection
 
 @section('content')
-<div class="row">
-    <img src="logo.svg" class="img-fluid mx-auto d-block pb-5" alt="Living Jim Crow" style="width: 100% \9";>
-</div>
 
     <aside id="vault">
       <div class="c-offcanvas-content-wrap">
