@@ -20,6 +20,7 @@ nav {
 }
 .scene {
 /*	box-shadow: -5px 5px 10px 0px;*/
+	margin-top: -90px;
 }
 .story-card {
 	margin-bottom: 1rem;
