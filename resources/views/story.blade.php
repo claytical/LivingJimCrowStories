@@ -21,12 +21,14 @@
 @section('content')
 
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-sm-6">
     <h1>{{ $story->title}}</h1>
     <h2>{{ $story->authors}}</h2>
-    
-
+  </div>   
+  <div class="col-sm-6" id="alert_area">
+    </div>
   </div>
+</div>
 </div>
 <div class="row">
   <div class="col-sm-6">    

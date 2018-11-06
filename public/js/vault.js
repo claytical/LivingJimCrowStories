@@ -2,7 +2,8 @@
 function unlock(item_id) {
 	//call to API
 	$.getJSON( "https://livingjimcrow.app/get/item/" + item_id, function( data ) {
-		format_and_add_item(data);
+//		format_and_add_item(data);
+		format_unlock_alert(data);
 		});
 	add_vault_notification();
 }
@@ -25,6 +26,16 @@ function add_vault_notification() {
 		$("#vault_link").append("<span class='badge badge-vault badge-vault-text'>1</span>");
 
 	}
+}
+
+
+
+function format_unlock_alert(data) {
+	var html = '<div class="alert alert-unlock alert-dismissible fade show" role="alert">';
+	html += '<img src="https://livingjimcrow.app/icons/printmedia.png" width="50" class="float-left">';
+	html += '<strong>' + data.item.title + '</strong>' + ' unlocked and added to vault!';
+	html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';      
+	$("#alert_area").prepend(html);
 }
 
 function format_and_add_item(data) {

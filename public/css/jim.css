@@ -44,6 +44,13 @@ nav {
     padding: 1rem;
 }
 
+.alert-unlock {
+	color: #856404;
+    background-color: #fff3cd;
+    border-color: gray;
+    box-shadow: black 4px 4px 30px;
+}
+
 .btn .badge-vault {
     position: relative;
     top: -15px;
