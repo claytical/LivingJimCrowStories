@@ -5,7 +5,7 @@ function unlock(item_id) {
 //		format_and_add_item(data);
 		format_unlock_alert(data);
 		});
-	add_vault_notification();
+//	add_vault_notification();
 }
 
 function unlock_random(category_id) {
