@@ -32,8 +32,10 @@ function add_vault_notification() {
 
 function format_unlock_alert(data) {
 	var html = '<div class="alert alert-unlock alert-dismissible fade show" role="alert">';
-	html += '<img src="https://livingjimcrow.app/icons/printmedia.png" width="50" class="float-left">';
-	html += '<strong>' + data.item.title + '</strong>' + ' unlocked and added to vault!';
+	html += '<div class="float-left mr-2">';
+	html += '<img src="https://livingjimcrow.app/icons/printmedia.png" width="25">';
+	html += '</div>';
+	html += '<div><strong>' + data.item.title + '</strong>' + ' unlocked and added to vault!</div>';
 	html += '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';      
 	$("#alert_area").prepend(html);
 }
