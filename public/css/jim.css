@@ -1,22 +1,41 @@
 body {
 	background-color: #DCD0C0;
-	background-image: url("/bg/ricepaper.jpg");
+/*	background-image: url("/bg/ricepaper.jpg"); */
 	font-family: 'IM Fell DW Pica', serif;
-	color: #4E4E56;
+    background-color: #DCD0C0;
+    color: #4E4E56;
+    background-image: url(/going off_cl.png);
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
+.buttons {
+	padding-left: 40px;
+}
 .logo {
 	height: 50px;
-	float: right;
-}
-nav {
-	padding-left: 40px;
+    position: relative;
+    float: right;
     padding-right: 40px;
-    padding-top: 40px;
+    margin-top: -40px;
+}
+nav.top {
+    position: absolute;
+    top: 40px;
+    width: 100%;
 }
 .jim-container {
   padding: 5rem 1.5rem;
  
+}
+.hero {
+	position: absolute;
+    top: 200px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
 }
 .scene {
 /*	box-shadow: -5px 5px 10px 0px;*/

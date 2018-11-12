@@ -16,20 +16,23 @@
     <body>
 
         @section('topnav')
-            <nav>
-            @if (!Auth::check())
-                <a class="btn btn-outline-dark" href="{{ url('redirect/facebook')}}"><i class="fab fa-facebook"></i> Login with Facebook</a>
-            @endif
+            <nav class="top">
+                <section class="buttons">
+                @if (!Auth::check())
+                    <a class="btn btn-outline-dark" href="{{ url('redirect/facebook')}}"><i class="fab fa-facebook"></i> Login with Facebook</a>
+                @endif
 
-            <a class="" href="{{url('/')}}"><img width="50" src="{{ url('icons/home.png')}}"/></a>
-            @if (Auth::check())
-                <a class="m-2" href="#" id="vault_link"><img width="50" src="{{ url('icons/vault.png')}}"/></a>
-            @endif
-            
-            @if(\Request::is('play/*'))
-                <a id="restart" href="#" class=""><img width="40" src="{{ url('icons/restart.png')}}"/></a>
-            @endif
-            <img src="{{url('/logo.svg')}}" class="logo" alt="Living Jim Crow"/>
+                <a class="" href="{{url('/')}}"><img width="50" src="{{ url('icons/home.png')}}"/></a>
+                @if (Auth::check())
+                    <a class="m-2" href="#" id="vault_link"><img width="50" src="{{ url('icons/vault.png')}}"/></a>
+                @endif
+                
+                @if(\Request::is('play/*'))
+                    <a id="restart" href="#" class=""><img width="40" src="{{ url('icons/restart.png')}}"/></a>
+                @endif
+                </section>
+
+                <img src="{{url('/logo.svg')}}" class="logo" alt="Living Jim Crow"/>
 
             </nav>
         @show
