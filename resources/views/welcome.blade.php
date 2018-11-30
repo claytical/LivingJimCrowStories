@@ -3,19 +3,22 @@
 @section('title', 'Living Jim Crow')
 
 @section('topnav')
+  <div id="cover">
     <img class="img-fluid" src="going off_cl.png">
+  </div>
     @parent
     <!-- additional topnav-->
     <div class="hero">
       <h1 class="display-4 push-50-pct">The Untold Story of Baseball's Desegregation</h1>
       <p class="lead push-25-pct">Jackie Robinson broke baseball’s color line in 1947, but it took another generation of Black and Latino players to make the sport truly open to all. Playing in remote minor-league towns, these 
 were the men who, before they could live their big-league dreams, first had to beat Jim Crow.</p>
-      <div class="polaroids">
-          <img src="/bg/polaroid1.png" class="polaroid web mobile"/>
-          <img src="/bg/polaroid2.png" class="polaroid web" />
-      </div>
 
     </div>
+      <div class="polaroids">
+          <img src="/bg/polaroid1.png" class="polaroid-1 web mobile img-fluid"/>
+          <img src="/bg/polaroid2.png" class="polaroid-2 web img-fluid" />
+      </div>
+
 @endsection
 
 @section('content')
@@ -33,7 +36,7 @@ were the men who, before they could live their big-league dreams, first had to b
 <div class="row">
   <div class="col-sm-12"><h1 class="text-center">Experience Their Stories</h1></div>
     @foreach($stories as $story)
-        <div class="col-sm-4">
+        <div class="col-sm-4 pt-5">
             <div class="card story-card">
                 <div class="card-body">
                   <h5 class="card-title">{{ $story->title}}</h5>
