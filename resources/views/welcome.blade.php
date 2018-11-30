@@ -7,10 +7,14 @@
     @parent
     <!-- additional topnav-->
     <div class="hero">
-      <h1 class="display-4">The Untold Story of Baseball's Desegregation</h1>
-      <p class="lead">Jackie Robinson broke baseball’s color line in 1947, but it took another generation of Black and 
-Latino players to make the sport truly open to all. Playing in remote minor-league towns, these 
+      <h1 class="display-4 push-50-pct">The Untold Story of Baseball's Desegregation</h1>
+      <p class="lead push-25-pct">Jackie Robinson broke baseball’s color line in 1947, but it took another generation of Black and Latino players to make the sport truly open to all. Playing in remote minor-league towns, these 
 were the men who, before they could live their big-league dreams, first had to beat Jim Crow.</p>
+      <div class="polaroids">
+          <img src="/bg/polaroid1.png" class="polaroid web mobile"/>
+          <img src="/bg/polaroid2.png" class="polaroid web" />
+      </div>
+
     </div>
 @endsection
 
@@ -27,13 +31,14 @@ were the men who, before they could live their big-league dreams, first had to b
 
 
 <div class="row">
+  <div class="col-sm-12"><h1 class="text-center">Experience Their Stories</h1></div>
     @foreach($stories as $story)
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <div class="card story-card">
                 <div class="card-body">
                   <h5 class="card-title">{{ $story->title}}</h5>
                   <p class="card-text">{{ $story->description }}</p>
-                  <a class="btn btn-outline-dark float-right" href="{{ url('play/'.$story->id) }}"><i class="fas fa-play"></i></a>
+                  <a class="btn btn-outline-dark bottom-left-corner" href="{{ url('play/'.$story->id) }}">Play</a>
                 </div>
             </div>
         </div>

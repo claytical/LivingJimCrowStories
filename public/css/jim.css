@@ -10,6 +10,20 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.bottom-left-corner {
+	position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+.push-50-pct {
+	margin-right: 25%;
+	margin-left: 25%;
+}
+.push-25-pct {
+	margin-left: 12.5%;
+    margin-right: 12.5%;
+}
 .buttons {
 	padding-left: 40px;
 }
@@ -29,9 +43,10 @@ nav.top {
   padding: 5rem 1.5rem;
  
 }
+
 .hero {
 	position: absolute;
-    top: 200px;
+    top: 140px;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -43,6 +58,10 @@ nav.top {
 }
 .story-card {
 	margin-bottom: 1rem;
+	border: 1px solid black;
+    border-radius: 0px;
+    background: transparent;
+    min-height: 250px;
 }
 
 .vault-card {
