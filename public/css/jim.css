@@ -1,14 +1,12 @@
 body {
 	background-color: #DCD0C0;
-/*	background-image: url("/bg/ricepaper.jpg"); */
+	background-image: url("/bg/ricepaper.jpg"); 
 	font-family: 'IM Fell DW Pica', serif;
     background-color: #DCD0C0;
     color: #4E4E56;
-    background-image: url(/going off_cl.png);
     height: 100%;
     background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
 }
 
 .bottom-left-corner {
