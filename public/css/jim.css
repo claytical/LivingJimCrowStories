@@ -41,6 +41,10 @@ body {
 .buttons {
 	padding-left: 40px;
 }
+.vault-modal {
+	border: 1px solid black;
+    margin: 25px;
+}
 .logo {
 	height: 50px;
     position: relative;

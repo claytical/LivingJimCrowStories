@@ -24,7 +24,7 @@
 
                 <a class="" href="{{url('/')}}"><img width="50" src="{{ url('icons/home.png')}}"/></a>
                 @if (Auth::check())
-                    <a class="m-2" href="#" id="vault_link"><img width="50" src="{{ url('icons/vault.png')}}"/></a>
+                    <a class="m-2" data-toggle="modal" data-target=".vault-modal-lg" href="#" id="vault_link"><img width="50" src="{{ url('icons/vault.png')}}"/></a>
                 @endif
                 
                 @if(\Request::is('play/*'))

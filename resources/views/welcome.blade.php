@@ -14,7 +14,7 @@
 were the men who, before they could live their big-league dreams, first had to beat Jim Crow.</p>
 
     </div>
-      <div class="polaroids">
+      <div class="polaroids push-25-pct">
           <img src="/bg/polaroid1.png" class="polaroid-1 web mobile img-fluid"/>
           <img src="/bg/polaroid2.png" class="polaroid-2 web img-fluid" />
       </div>
