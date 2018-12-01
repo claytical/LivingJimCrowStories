@@ -5,16 +5,6 @@
 @section('topnav')
     @parent
     <!-- additional topnav-->    
-    <aside id="vault">
-      <div class="c-offcanvas-content-wrap">
-          <a href="#vault" id="vault_trigger" class="vault-header btn btn-dark-outline btn-sm float-right"><i class="fas fa-times"></i></a>
-          <a href="{{url('vault')}}" class='vault-header btn btn-md float-right'><i class="fas fa-expand"></i></a>
-      </div>
-
-         <h2>Vault</h2>
-         
-         <div id="vault_content"></div>
-    </aside>
 
 @endsection
 
