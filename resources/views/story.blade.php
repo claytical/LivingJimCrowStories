@@ -30,7 +30,7 @@
 </div>
 
 <div class="modal fade vault-modal-lg" tabindex="-1" role="dialog" aria-labelledby="vaultModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="vault-close float-right">
      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>      
@@ -47,7 +47,7 @@
             </div>
           </div>
 
-          <div class="row vault-side">
+          <div class="row row-eq-height vault-side">
               @if($vault)
                 @foreach($vault as $item)
                   <div class="col-sm-4">
@@ -66,7 +66,7 @@
                     <div class="col-sm-4">
                         <div class="vault-card">
                             <div class="vault-body">
-                                <img src="/icons/lock.png" class="lock-image img-fluid"/>
+                                <img src="/icons/lock.png" class="lock-image"/>
                             </div>
                         </div>
                     </div>

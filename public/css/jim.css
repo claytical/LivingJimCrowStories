@@ -20,12 +20,12 @@ body {
     padding-top: 10px;
 }
 .modal-border-middle {
-	margin-top: -10px;
+	margin-top: -8px;
     padding-right: 0px;
     padding-left: 0px;
     background-image: url(/css/vault_banner.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .bottom-left-corner {
 	position: absolute;
@@ -73,8 +73,8 @@ body {
 .modal-border-middle .modal-title {
 	text-align: center;
     font-size: 1.5rem;
-    padding-bottom: 43px;
-    padding-top: 20px;
+    padding-bottom: 35px;
+    padding-top: 10px;
 }
 .logo {
 	height: 50px;
@@ -116,11 +116,15 @@ nav.top {
 .vault-card, .vault-card-locked {
     border: 2px solid black;
     padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .lock-image {
 	display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #vault {
@@ -196,4 +200,16 @@ a.vault-header {
 
 a.vault-header:hover {
 	color: #6E7A73;
+}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+/* OVERRIDES */
+@media (min-width: 992px)
+.modal-xl {
+    max-width: 980px;
 }
