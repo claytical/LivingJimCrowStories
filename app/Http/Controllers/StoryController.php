@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Story;
 use Illuminate\Support\Facades\Storage;
+use Socialite;
+use Illuminate\Support\Facades\Auth;
+use App\VaultItem;
 
 class StoryController extends Controller
 {
