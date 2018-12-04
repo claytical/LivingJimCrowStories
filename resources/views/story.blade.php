@@ -30,7 +30,7 @@
 </div>
 
 <div class="modal fade vault-modal-lg" tabindex="-1" role="dialog" aria-labelledby="vaultModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="vault-close float-right">
      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>      
