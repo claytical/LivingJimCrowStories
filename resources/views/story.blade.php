@@ -32,12 +32,31 @@
 <div class="modal fade vault-modal-lg" tabindex="-1" role="dialog" aria-labelledby="vaultModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">      
-      <div class="modal-body vault-modal" style="">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button><h5 class="modal-title h4" id="vaultModalLabel">Vault</h5>
+      <div class="modal-body vault-modal">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm modal-border-left">
+            </div>
+            <div class="col-sm modal-border-middle">
+              <img src="/css/vault_banner.png" class="img-fluid"/>
+            </div>
+            <div class="col-sm modal-border-right">
+            </div>
+          </div>
 
-    <div>Something</div>
+          <div class="row">
+            <div class="col-sm">
+            </div>
+                <h5 class="modal-title h4" id="vaultModalLabel">Vault</h5>            
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-sm">
+              <div>Something</div>
+            </div>
+          </div>
       </div>
     </div>
   </div>
