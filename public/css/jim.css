@@ -73,7 +73,8 @@ body {
 .modal-border-middle .modal-title {
 	text-align: center;
     font-size: 1.5rem;
-    padding-bottom: 15px;
+    padding-bottom: 43px;
+    padding-top: 20px;
 }
 .logo {
 	height: 50px;
@@ -116,7 +117,11 @@ nav.top {
     border: 2px solid black;
     padding: 10px;
 }
-
+.lock-image {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #vault {
     background-image: url("/bg/ricepaper2.jpg");
