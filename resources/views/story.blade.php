@@ -38,12 +38,12 @@
       <div class="modal-body vault-modal">
         <div class="container bottom-vault">
           <div class="row vault-side">
-            <div class="col-sm modal-border-left">
+            <div class="col-sm modal-border-side">
             </div>
             <div class="col-sm modal-border-middle">
               <img src="/css/vault_banner.png" class="img-fluid"/>
             </div>
-            <div class="col-sm modal-border-right">
+            <div class="col-sm modal-border-side">
             </div>
           </div>
 

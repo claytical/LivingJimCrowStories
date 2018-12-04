@@ -58,8 +58,10 @@ body {
 	padding-left: 40px;
 }
 .vault-modal {
-	border: 1px solid black;
-    margin: 25px;
+}
+
+.modal-border-side {
+	border-top: 2px solid black;
 }
 .logo {
 	height: 50px;
