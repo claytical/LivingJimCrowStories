@@ -8,7 +8,25 @@ body {
     background-position: top;
     background-repeat: repeat;
 }
-
+.bottom-vault {
+	border-bottom: 2px solid black;
+}
+.bottom-vault {
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+.vault-close {
+	padding-right: 10px;
+    padding-top: 10px;
+}
+.modal-border-middle {
+	margin-top: -10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    background-image: url(/css/vault_banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .bottom-left-corner {
 	position: absolute;
     bottom: 15px;
