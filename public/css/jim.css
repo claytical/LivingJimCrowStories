@@ -32,6 +32,12 @@ body {
     bottom: 15px;
     right: 15px;
 }
+
+.bottom-right-corner {
+	position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
 .push-50-pct {
 	margin-right: 25%;
 	margin-left: 25%;
@@ -62,6 +68,12 @@ body {
 
 .modal-border-side {
 	border-top: 2px solid black;
+}
+
+.modal-border-middle .modal-title {
+	text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
 }
 .logo {
 	height: 50px;
@@ -100,22 +112,20 @@ nav.top {
     min-height: 250px;
 }
 
-.vault-card {
-	margin-bottom: 1rem;
-	background-color: #6e7a73;
-	color: #ffffff;
+.vault-card, .vault-card-locked {
+    border: 2px solid black;
+    padding: 10px;
 }
 
-.vault-card-locked {
-	margin-bottom: 1rem;
-	background-color: #4E4E56;
-	color: #aaaaaa;
-}
 
 #vault {
     background-image: url("/bg/ricepaper2.jpg");
     z-index: 9999;
     padding: 1rem;
+}
+
+.vault-text {
+	font-size: .75rem;
 }
 
 #alert_area {

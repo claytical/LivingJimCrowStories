@@ -41,28 +41,21 @@
             <div class="col-sm modal-border-side">
             </div>
             <div class="col-sm modal-border-middle">
-              <img src="/css/vault_banner.png" class="img-fluid"/>
+                <h5 class="modal-title h4" id="vaultModalLabel">Vault</h5>            
             </div>
             <div class="col-sm modal-border-side">
             </div>
           </div>
 
           <div class="row vault-side">
-            <div class="col-sm">
-                <h5 class="modal-title h4" id="vaultModalLabel">Vault</h5>            
-               
-            </div>
-
-          </div>
-          <div class="row vault-side">
               @if($vault)
                 @foreach($vault as $item)
-                  <div class="col-sm">
+                  <div class="col-sm-4">
                         <div class="vault-card">
                             <div class="vault-body">
-                              <h5 class="vault-title">{{ $item->title}}</h5>
+                              <div class="vault-title">{{ $item->title}}</div>
                               <p class="vault-text">{{ $item->description }}</p>
-                              <a href="{{ $item->url }}">View Source</a>
+                              <a href="{{ $item->url }}" class="btn btn-outline-dark bottom-right-corner">View Source</a>
                             </div>
                         </div>
                     </div>
@@ -70,7 +63,7 @@
               @endif
               @if($locked)
                 @foreach($locked as $item)
-                    <div class="col-sm">
+                    <div class="col-sm-4">
                         <div class="=vault-card-locked">
                             <div class="vault-body">
                                 <img src="/icons/lock.png" class="img-fluid"/>
