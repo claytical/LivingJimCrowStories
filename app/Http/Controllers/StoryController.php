@@ -24,8 +24,22 @@ class StoryController extends Controller
 		$story->authors = "Me, Myself, and I";
 		$story->squiffy = "example";
  */
- 		return view('story', ['story' => $story]);
-    }  
+    $user = Auth::user();
+    if($user) {
+    $vault = $user->items;
+    $locked_items = VaultItem::whereNotIn('vault_items.id', $vault)->get();
+    $categories = ["1" => "Archival Video", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Web Article", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping", "8" => "Bookmark"];
+    $icons = ["1" => "video.png", "2" => "image.png", "3" => "audio.png", "4" => "article.png", "5" => "greenbook.png", "6" => "video.png", "7" => "printmedia.png", "8" => "unlock.png"];
+
+      return view('story', ['story' => $story, 'vault' => $vault, 'categories' => $categories, 'icons' => $icons, 'locked' => $locked_items]);
+
+    }
+    else {
+
+      return view('story', ['story' => $story, 'vault' => false, 'locked' => false]);
+
+    }    
+  }  
 
 	public function edit($id) {
 		$story = Story::find($id);

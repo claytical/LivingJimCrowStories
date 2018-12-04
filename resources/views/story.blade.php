@@ -55,8 +55,30 @@
 
           </div>
           <div class="row vault-side">
-            <div class="col-sm">
-              <div>Something</div>
+              @if($vault)
+                @foreach($vault as $item)
+                  <div class="col-sm">
+                        <div class="vault-card">
+                            <div class="vault-body">
+                              <h5 class="vault-title">{{ $item->title}}</h5>
+                              <p class="vault-text">{{ $item->description }}</p>
+                              <a href="{{ $item->url }}">View Source</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+              @endif
+              @if($locked)
+                @foreach($locked as $item)
+                    <div class="col-sm">
+                        <div class="=vault-card-locked">
+                            <div class="vault-body">
+                                <img src="/icons/lock.png" class="img-fluid"/>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+              @endif
             </div>
           </div>
         </div>
