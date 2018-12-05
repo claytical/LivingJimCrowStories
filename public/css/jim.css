@@ -17,12 +17,12 @@ body {
 }
 .vault-close {
 	position: absolute;
-    top: 0px;
-    right: 1px;
+    top: 20px;
+    right: 25px;
 }
 
 .modal-border-middle {
-	margin-top: 6px;
+	margin-top: -6px;
     padding-right: 0px;
     padding-left: 0px;
     background-image: url(/css/vault_banner.png);
@@ -66,8 +66,21 @@ body {
 	padding-left: 40px;
 }
 .vault-modal {
+    background-image: url(/bg/ricepaper.jpg);
+    box-shadow: 0px 5px 10px 5px;
 }
-
+.side-tabs {
+	position: absolute;
+    right: -50px;
+    top: 18px;
+}
+.vault-tab {
+	width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    background-image: url(/bg/ricepaper.jpg);
+    box-shadow: 10px 1px 10px -2px;
+}
 .modal-border-side {
 	border-top: 2px solid black;
 }
@@ -76,7 +89,7 @@ body {
 	text-align: center;
     font-size: 1.5rem;
     padding-bottom: 35px;
-    padding-top: 10px;
+    padding-top: 6px;
 }
 .logo {
 	height: 50px;

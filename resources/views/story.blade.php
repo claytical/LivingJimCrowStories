@@ -75,6 +75,14 @@
               @endif
             </div>
           </div>
+          <div class="side-tabs">
+                  <div class="vault-tab"><a href="#"><img src="/icons/image.png" class="img-fluid"></a></div>
+                  <div class="vault-tab"><a href="#"><img src="/icons/newspaper.png" class="img-fluid"></a></div>
+                  <div class="vault-tab"><a href="#"><img src="/icons/video.png" class="img-fluid"></a></div>
+                  <div class="vault-tab"><a href="#"><img src="/icons/article.png" class="img-fluid"></a></div>
+                  <div class="vault-tab"><a href="#"><img src="/icons/greenbook.png" class="img-fluid"></a></div>
+              </div>
+
         </div>
       </div>
     </div>
