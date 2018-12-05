@@ -83,9 +83,12 @@ body {
     border: 1px solid black;
     border-radius: 0px;
     color: black;
+    margin: 5px;
 }
-.pager .page-link:first, .pager .page-link:last {
-	border-radius: 0px;
+
+.page-item:last-child .page-link, .page-item:first-child .page-link {
+     border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
 }
 
 a.page-link:hover {
