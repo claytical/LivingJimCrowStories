@@ -32,27 +32,28 @@
 <div class="modal fade vault-modal-lg" tabindex="-1" role="dialog" aria-labelledby="vaultModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="vault-close float-right">
-     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>      
+      <div class="vault-close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>      
    </div>
       <div class="modal-body vault-modal">
         <div class="container bottom-vault">
           <div class="row vault-side">
             <div class="col-sm modal-border-side">
             </div>
-            <div class="col-sm modal-border-middle">
+            <div class="col-sm-2 modal-border-middle">
                 <div class="modal-title" id="vaultModalLabel">Vault</div>            
             </div>
             <div class="col-sm modal-border-side">
             </div>
           </div>
 
-          <div class="row row-eq-height vault-side">
+          <div class="row vault-side">
               @if($vault)
                 @foreach($vault as $item)
                   <div class="col-sm-4">
                         <div class="vault-card">
                             <div class="vault-body">
+                              <img src="/icons/new.png" class="new-vault-item"/>
                               <div class="vault-title">{{ $item->title}}</div>
                               <p class="vault-text">{{ $item->description }}</p>
                               <a href="{{ $item->url }}" class="btn btn-outline-dark">View Source</a>

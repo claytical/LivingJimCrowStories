@@ -16,11 +16,13 @@ body {
 	border-right: 2px solid black;
 }
 .vault-close {
-	padding-right: 10px;
-    padding-top: 10px;
+	position: absolute;
+    top: 0px;
+    right: 1px;
 }
+
 .modal-border-middle {
-	margin-top: -8px;
+	margin-top: 6px;
     padding-right: 0px;
     padding-left: 0px;
     background-image: url(/css/vault_banner.png);
@@ -135,6 +137,12 @@ nav.top {
 
 .vault-text {
 	font-size: .75rem;
+}
+
+.new-vault-item {
+	position: absolute;
+    top: 0px;
+    right: 1px;
 }
 
 #alert_area {
