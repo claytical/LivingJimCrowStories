@@ -75,11 +75,17 @@ body {
     top: 18px;
     z-index: 9999;
 }
+.pager {
+	margin-top: 20px;
+}
 .pager .page-link {
 	background-color: transparent;
     border: 1px solid black;
     border-radius: 0px;
     color: black;
+}
+.pager .page-link:first, .pager .page-link:last {
+	border-radius: 0px;
 }
 
 a.page-link:hover {
