@@ -73,13 +73,29 @@ body {
 	position: absolute;
     right: -50px;
     top: 18px;
+    z-index: 9999;
 }
+.pager .page-link {
+	background-color: transparent;
+    border: 1px solid black;
+    border-radius: 0px;
+    color: black;
+}
+
+a.page-link:hover {
+	text-decoration: none;
+	background-color: #B1938B;
+	cursor: pointer;
+}
+
 .vault-tab {
 	width: 50px;
     height: 50px;
     margin-bottom: 5px;
     background-image: url(/bg/ricepaper.jpg);
     box-shadow: 10px 1px 10px -2px;
+    padding: 12px;
+    border-left: 1px solid black;
 }
 .modal-border-side {
 	border-top: 2px solid black;
@@ -159,7 +175,7 @@ nav.top {
 }
 
 #alert_area {
-	z-index: 999999;
+	z-index: 20;
 }
 .alert-unlock {
 	color: #856404;

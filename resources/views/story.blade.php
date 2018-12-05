@@ -75,6 +75,21 @@
               @endif
             </div>
           </div>
+          <div class="pager">
+          <nav aria-label="Category Navigation">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#" tabindex="-1">&lt;</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">&gt;</a>
+              </li>
+            </ul>
+          </nav>
+          </div>
           <div class="side-tabs">
                   <div class="vault-tab"><a href="#"><img src="/icons/image.png" class="img-fluid"></a></div>
                   <div class="vault-tab"><a href="#"><img src="/icons/newspaper.png" class="img-fluid"></a></div>
