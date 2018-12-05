@@ -201,15 +201,9 @@ a.vault-header {
 a.vault-header:hover {
 	color: #6E7A73;
 }
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-}
 
 /* OVERRIDES */
 @media (min-width: 992px)
-.modal-xl {
-    max-width: 980px;
+.modal-lg {
+    max-width: 980px!important;
 }
