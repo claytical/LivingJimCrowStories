@@ -91,6 +91,11 @@ body {
      border-bottom-right-radius: 0px;
 }
 
+.page-item:first-child .page-link {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
 a.page-link:hover {
 	text-decoration: none;
 	background-color: #B1938B;
