@@ -48,8 +48,8 @@
           </div>
 
           <div class="row vault-side">
-              @if($vault_items)
-                @foreach($vault_items as $category => $items)
+              @if($vault)
+                @foreach($vault as $category => $items)
                   @foreach($items as $item)
                   <div class="col-sm-4">
                         <div class="vault-card">
