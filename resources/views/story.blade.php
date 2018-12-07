@@ -48,6 +48,7 @@
           </div>
 
           <div class="row vault-side">
+            {{ var_dump($vault_items) }}
               @if($vault_items)
                 @foreach($vault_items as $category => $items)
                   @foreach($items as $item)
