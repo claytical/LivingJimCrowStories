@@ -26,19 +26,18 @@ class StoryController extends Controller
     $vault->transform(function ($item, $key) {
       return $item['locked'] = false; 
     });
-    $vault = $user->items->groupBy('category')->toArray();
+    $vault = $user->items->groupBy('category');
 
     $locked_items = VaultItem::whereNotIn('vault_items.id', $vault)->get();
     $locked_items->transform(function($item, $key) {
       return $item['locked'] = true;
     });
-    $locked_items = $locked_items->groupBy('category')->toArray();
+    $locked_items = $locked_items->groupBy('category');
 
-    $vault_items = array_merge($vault, $locked_items);
     $categories = ["1" => "Archival Video", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Web Article", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping", "8" => "Bookmark"];
     $icons = ["1" => "video.png", "2" => "image.png", "3" => "audio.png", "4" => "article.png", "5" => "greenbook.png", "6" => "video.png", "7" => "printmedia.png", "8" => "unlock.png"];
 
-      return view('story', ['story' => $story, 'vault' => $vault, 'vault_items' => $vault_items, 'categories' => $categories, 'icons' => $icons, 'locked' => $locked_items]);
+      return view('story', ['story' => $story, 'vault' => $vault, 'categories' => $categories, 'icons' => $icons, 'locked' => $locked_items]);
 
     }
     else {

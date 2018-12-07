@@ -48,7 +48,6 @@
           </div>
 
           <div class="row vault-side">
-            {{ var_dump($vault_items) }}
               @if($vault_items)
                 @foreach($vault_items as $category => $items)
                   @foreach($items as $item)
@@ -67,6 +66,21 @@
                         </div>
                     </div>
                     @endforeach
+                @endforeach
+              @endif
+              @if($locked)
+                @foreach($locked as $category => $items)
+                @foreach($items as $item)
+                    <div class="col-sm-4">
+                        <div class="vault-card">
+                            <div class="vault-body">
+                                <img src="/icons/lock.png" class="lock-image"/>
+                              {!! $item['status'] !!}
+
+                            </div>
+                        </div>
+                    </div>
+                  @endforeach
                 @endforeach
               @endif
             </div>
