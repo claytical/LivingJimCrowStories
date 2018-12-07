@@ -62,6 +62,7 @@
                         </div>
                     </div>
                     @endforeach
+                {!! $items->links() !!}
                 @endforeach
               @endif
               @if($locked)
@@ -78,6 +79,8 @@
             </div>
           </div>
           <div class="pager">
+          
+          <!--
           <nav aria-label="Category Navigation">
             <ul class="pagination justify-content-center">
               <li class="page-item">
@@ -91,6 +94,8 @@
               </li>
             </ul>
           </nav>
+          -->
+            
           </div>
           <div class="side-tabs">
                   <div class="vault-tab"><a href="#"><img src="/icons/image.png" class="img-fluid"></a></div>
