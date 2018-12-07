@@ -57,7 +57,7 @@
                               <img src="/icons/new.png" class="new-vault-item"/>
                               <div class="vault-title">{{ $item['title']}}</div>
                               <p class="vault-text">{{ $item['description'] }}</p>
-                              <a href="{{ $item->url }}" class="btn btn-outline-dark">View Source</a>
+                              <a href="{{ $item['url'] }}" class="btn btn-outline-dark">View Source</a>
                               {!! $item['status'] !!}
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                         <div class="vault-card">
                             <div class="vault-body">
                                 <img src="/icons/lock.png" class="lock-image"/>
-                              {!! $item->status !!}
+                              {!! $item['status'] !!}
 
                             </div>
                         </div>
