@@ -55,10 +55,10 @@
                         <div class="vault-card">
                             <div class="vault-body">
                               <img src="/icons/new.png" class="new-vault-item"/>
-                              <div class="vault-title">{{ $item->title}}</div>
-                              <p class="vault-text">{{ $item->description }}</p>
+                              <div class="vault-title">{{ $item['title']}}</div>
+                              <p class="vault-text">{{ $item['description'] }}</p>
                               <a href="{{ $item->url }}" class="btn btn-outline-dark">View Source</a>
-                              {!! $item->status !!}
+                              {!! $item['status'] !!}
                             </div>
                         </div>
                     </div>
