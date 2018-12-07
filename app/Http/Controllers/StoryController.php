@@ -20,17 +20,17 @@ class StoryController extends Controller
 	public function show($id) {
 
 		$story = Story::find($id);
-/*		$story = new \stdClass();
-		$story->title = "Sample Title for Story";
-		$story->description = "Lorem ipsum description";
-		$story->id = 1;
-		$story->authors = "Me, Myself, and I";
-		$story->squiffy = "example";
- */
     $user = Auth::user();
     if($user) {
-    $vault = $user->items->groupBy('category')->paginate(2);
-    $locked_items = VaultItem::whereNotIn('vault_items.id', $vault)->get();
+    $vault = $user->items->groupBy('category');
+    $vault->transform(function ($item, $key)) {
+      return $item['locked'] = false; 
+    });
+    $locked_items = VaultItem::whereNotIn('vault_items.id', $vault)->groupBy('category')->get();
+    $locked_items->transform(function($item, $key)) {
+      return $item['locked'] = true;
+    });
+
     $categories = ["1" => "Archival Video", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Web Article", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping", "8" => "Bookmark"];
     $icons = ["1" => "video.png", "2" => "image.png", "3" => "audio.png", "4" => "article.png", "5" => "greenbook.png", "6" => "video.png", "7" => "printmedia.png", "8" => "unlock.png"];
 
