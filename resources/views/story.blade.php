@@ -52,12 +52,12 @@
                 @foreach($vault as $category => $items)
                   @foreach($items as $item)
                   <div class="col-sm-4">
-                        <div class="vault-card">
+                        <div class="vault-card category-{!! $item->category !!}">
                             <div class="vault-body">
                               <img src="/icons/new.png" class="new-vault-item"/>
-                              <div class="vault-title">{{ $item['title']}}</div>
-                              <p class="vault-text">{{ $item['description'] }}</p>
-                              <a href="{{ $item['url'] }}" class="btn btn-outline-dark">View Source</a>
+                              <div class="vault-title">{{ $item->title}}</div>
+                              <p class="vault-text">{{ $item->description }}</p>
+                              <a href="{{ $item->url }}" class="btn btn-outline-dark">View Source</a>
                             </div>
                         </div>
                     </div>
@@ -68,11 +68,9 @@
                 @foreach($locked as $category => $items)
                 @foreach($items as $item)
                     <div class="col-sm-4">
-                        <div class="vault-card">
+                        <div class="vault-card category-{!! $item->category !!}">
                             <div class="vault-body">
                                 <img src="/icons/lock.png" class="lock-image"/>
-                              {!! $item['status'] !!}
-
                             </div>
                         </div>
                     </div>
