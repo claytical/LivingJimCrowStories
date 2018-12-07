@@ -48,35 +48,24 @@
           </div>
 
           <div class="row vault-side">
-              @if($vault)
-                @foreach($vault as $category => $items)
+              @if($vault_items)
+                @foreach($vault_items as $category => $items)
                   @foreach($items as $item)
                   <div class="col-sm-4">
                         <div class="vault-card">
                             <div class="vault-body">
+                              @if($item['status'])
                               <img src="/icons/new.png" class="new-vault-item"/>
                               <div class="vault-title">{{ $item['title']}}</div>
                               <p class="vault-text">{{ $item['description'] }}</p>
                               <a href="{{ $item['url'] }}" class="btn btn-outline-dark">View Source</a>
-                              {!! $item['status'] !!}
+                              @else
+                                <img src="/icons/lock.png" class="lock-image"/>
+                              @endif
                             </div>
                         </div>
                     </div>
                     @endforeach
-                {!! $items->links() !!}
-                @endforeach
-              @endif
-              @if($locked)
-                @foreach($locked as $item)
-                    <div class="col-sm-4">
-                        <div class="vault-card">
-                            <div class="vault-body">
-                                <img src="/icons/lock.png" class="lock-image"/>
-                              {!! $item['status'] !!}
-
-                            </div>
-                        </div>
-                    </div>
                 @endforeach
               @endif
             </div>
