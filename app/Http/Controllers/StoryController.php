@@ -34,7 +34,7 @@ class StoryController extends Controller
     });
     $locked_items = $locked_items->groupBy('category', true);
 
-    $vault_items = $vault->merge($locked_items);
+    $vault_items = array_merge($vault, $locked_items);
     $categories = ["1" => "Archival Video", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Web Article", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping", "8" => "Bookmark"];
     $icons = ["1" => "video.png", "2" => "image.png", "3" => "audio.png", "4" => "article.png", "5" => "greenbook.png", "6" => "video.png", "7" => "printmedia.png", "8" => "unlock.png"];
 
