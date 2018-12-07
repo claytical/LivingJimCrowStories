@@ -49,8 +49,7 @@
 
           <div class="row vault-side">
               @if($vault)
-                @foreach($vault as $category => $items)
-                  @foreach($items as $item)
+                  @foreach($vault as $item)
                   <div class="col-sm-4">
                         <div class="vault-card category-{!! $item->category !!}">
                             <div class="vault-body">
@@ -61,12 +60,10 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach
                 @endforeach
               @endif
               @if($locked)
-                @foreach($locked as $category => $items)
-                @foreach($items as $item)
+                @foreach($locked as $item)
                     <div class="col-sm-4">
                         <div class="vault-card category-{!! $item->category !!}">
                             <div class="vault-body">
@@ -74,7 +71,6 @@
                             </div>
                         </div>
                     </div>
-                  @endforeach
                 @endforeach
               @endif
             </div>
