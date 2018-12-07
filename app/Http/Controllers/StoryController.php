@@ -23,11 +23,11 @@ class StoryController extends Controller
     $user = Auth::user();
     if($user) {
     $vault = $user->items->groupBy('category');
-    $vault->transform(function ($item, $key)) {
+    $vault->transform(function ($item, $key) {
       return $item['locked'] = false; 
     });
     $locked_items = VaultItem::whereNotIn('vault_items.id', $vault)->groupBy('category')->get();
-    $locked_items->transform(function($item, $key)) {
+    $locked_items->transform(function($item, $key) {
       return $item['locked'] = true;
     });
 
