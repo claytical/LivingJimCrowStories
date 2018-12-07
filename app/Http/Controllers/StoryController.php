@@ -22,14 +22,17 @@ class StoryController extends Controller
 		$story = Story::find($id);
     $user = Auth::user();
     if($user) {
-    $vault = $user->items->groupBy('category');
+    $vault = $user->items;
     $vault->transform(function ($item, $key) {
       return $item['locked'] = false; 
     });
-    $locked_items = VaultItem::whereNotIn('vault_items.id', $vault)->groupBy('category')->get();
+    $vault = $user->items->groupBy('category');
+
+    $locked_items = VaultItem::whereNotIn('vault_items.id', $vault);
     $locked_items->transform(function($item, $key) {
       return $item['locked'] = true;
     });
+    $locked_items = $locked_items->groupBy('category')->get();
 
     $categories = ["1" => "Archival Video", "2" => "Archival Photo", "3" => "Archival Audio", "4" => "Web Article", "5" => "Scholarly Article", "6" => "Bonus Footage", "7" => "Newspaper Clipping", "8" => "Bookmark"];
     $icons = ["1" => "video.png", "2" => "image.png", "3" => "audio.png", "4" => "article.png", "5" => "greenbook.png", "6" => "video.png", "7" => "printmedia.png", "8" => "unlock.png"];
