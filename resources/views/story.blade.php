@@ -95,11 +95,11 @@
             
           </div>
           <div class="side-tabs">
-                  <div class="vault-tab"><a href="#"><img src="/icons/image.png" class="img-fluid"></a></div>
-                  <div class="vault-tab"><a href="#"><img src="/icons/newspaper.png" class="img-fluid"></a></div>
-                  <div class="vault-tab"><a href="#"><img src="/icons/video.png" class="img-fluid"></a></div>
-                  <div class="vault-tab"><a href="#"><img src="/icons/article.png" class="img-fluid"></a></div>
-                  <div class="vault-tab"><a href="#"><img src="/icons/greenbook.png" class="img-fluid"></a></div>
+                  <div class="vault-tab category-3"><a href="#"><img src="/icons/image.png" class="img-fluid"></a></div>
+                  <div class="vault-tab category-7 active"><a href="#"><img src="/icons/newspaper.png" class="img-fluid"></a></div>
+                  <div class="vault-tab category-1"><a href="#"><img src="/icons/video.png" class="img-fluid"></a></div>
+                  <div class="vault-tab category-4"><a href="#"><img src="/icons/article.png" class="img-fluid"></a></div>
+                  <div class="vault-tab category-5"><a href="#"><img src="/icons/greenbook.png" class="img-fluid"></a></div>
               </div>
 
         </div>
